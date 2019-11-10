@@ -8,13 +8,11 @@ namespace Task01_NET
         {
             Console.WriteLine("Enter two integers");
 
-            int x = Convert.ToInt32(Console.ReadLine());
+            int a = Convert.ToInt32(Console.ReadLine());
 
-            int y = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("{0} {1}", GCD.EuclideanGCD(x, y, out TimeSpan n), n);
-
-            Console.WriteLine("{0} {1}", GCD.SteinGCD(x, y, out TimeSpan m), m);
+            Console.WriteLine("{0} {1} {2}", GCD.CalculationTimeCompareData(a, b, out double x, out double y), x, y);
 
             Console.ReadLine();
         }

@@ -15,7 +15,7 @@ namespace Task01_NET
         /// <param name="b">Second integer</param>
         /// <param name="elapsed_time">Calculation time in milliseconds</param>
         /// <returns>GCD of two integers and calculation time in milliseconds</returns>
-        public static int EuclideanGCD(int a, int b, out TimeSpan elapsed_time)
+        public static int EuclideanGCD(int a, int b, out double elapsed_time)
         {
             Stopwatch timer = new Stopwatch();  // create new stopwatch object
             timer.Start();                      // begin timing
@@ -33,7 +33,7 @@ namespace Task01_NET
                 }
             }
             timer.Stop();                   // stop timing
-            elapsed_time = timer.Elapsed;   // output elapsed time
+            elapsed_time = timer.Elapsed.TotalMilliseconds;   // output elapsed time
             return a;
         }
 
@@ -47,7 +47,7 @@ namespace Task01_NET
         public static int EuclideanGCD(int a, int b, int c)
         {
             // recursive EuclideanGCD method call with void out parameters
-            return EuclideanGCD(EuclideanGCD(a, b, out TimeSpan time1), c, out TimeSpan time2);
+            return EuclideanGCD(EuclideanGCD(a, b, out double time1), c, out double time2);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Task01_NET
         public static int EuclideanGCD(int a, int b, int c, int d)
         {
             // recursive EuclideanGCD method call with void out parameter
-            return EuclideanGCD(EuclideanGCD(a, b, c), d, out TimeSpan time);
+            return EuclideanGCD(EuclideanGCD(a, b, c), d, out double time);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Task01_NET
         public static int EuclideanGCD(int a, int b, int c, int d, int e)
         {
             // recursive EuclideanGCD method call with void out parameter
-            return EuclideanGCD(EuclideanGCD(a, b, c, d), e, out TimeSpan time);
+            return EuclideanGCD(EuclideanGCD(a, b, c, d), e, out double time);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Task01_NET
         /// <param name="b">Second integer</param>
         /// <param name="elapsed_time">Calculation time in milliseconds</param>
         /// <returns>GCD of two integers and calculation time in milliseconds</returns>
-        public static int SteinGCD(int a, int b, out TimeSpan elapsed_time)
+        public static int SteinGCD(int a, int b, out double elapsed_time)
         {
             Stopwatch timer = new Stopwatch();          // create new stopwatch object
             timer.Start();                              // begin timing
@@ -95,28 +95,28 @@ namespace Task01_NET
             if (a == 0)
             {
                 timer.Stop();                           // stop timing
-                elapsed_time = timer.Elapsed;           // output elapsed time
+                elapsed_time = timer.Elapsed.TotalMilliseconds;           // output elapsed time
                 return Math.Abs(b);                     // GCD(0, b) = b
             }
 
             if (b == 0)
             {
                 timer.Stop();                           // stop timing
-                elapsed_time = timer.Elapsed;           // output elapsed time
+                elapsed_time = timer.Elapsed.TotalMilliseconds;           // output elapsed time
                 return Math.Abs(a);                     // GCD(a, 0) = a
             }
 
             if (a == b)
             {
                 timer.Stop();                           // stop timing
-                elapsed_time = timer.Elapsed;           // output elapsed time
+                elapsed_time = timer.Elapsed.TotalMilliseconds;           // output elapsed time
                 return Math.Abs(a);                     // GCD(a, a) = a
             }
 
             if (a == 1 || b == 1)
             {
                 timer.Stop();                           // stop timing
-                elapsed_time = timer.Elapsed;           // output elapsed time
+                elapsed_time = timer.Elapsed.TotalMilliseconds;           // output elapsed time
                 return 1;                               // GCD(1, b) = GCD(a, 1) = 1
             }
 
@@ -143,8 +143,28 @@ namespace Task01_NET
                 }
             }
             timer.Stop();                               // stop timing
-            elapsed_time = timer.Elapsed;               // output elapsed time
+            elapsed_time = timer.Elapsed.TotalMilliseconds;               // output elapsed time
             return b * k;
+        }
+
+        /// <summary>
+        /// Preparing data method for histogram plotting
+        /// </summary>
+        /// <param name="a">First integer for calculating GCD</param>
+        /// <param name="b">Second integer for calculating GCD</param>
+        /// <param name="euclidean_elapsed_time">Calculation time for Euclidean method</param>
+        /// <param name="stein_elapsed_time">Calculation time for Stein's method</param>
+        /// <returns>GCD of two integers and calculation time in milliseconds for both methods</returns>
+        public static int CalculationTimeCompareData(int a, int b, out double euclidean_elapsed_time, out double stein_elapsed_time)
+        {
+
+            int gcd = EuclideanGCD(a, b, out double x);
+            euclidean_elapsed_time = x;                     // return calculation time in milliseconds for Euclidean method
+
+            SteinGCD(a, b, out double y);
+            stein_elapsed_time =y;                          // return calculation time in milliseconds for Stein's method
+
+            return gcd;                                     // return GCD
         }
     }
 }
