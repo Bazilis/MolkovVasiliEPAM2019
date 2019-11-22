@@ -4,11 +4,11 @@ namespace ClassLibrary
 {
     public class Vector
     {
-        public double X { get; set; }       //property for 'X' dimension of vector
-        public double Y { get; set; }       //property for 'Y' dimension of vector
-        public double Z { get; set; }       //property for 'Z' dimension of vector
+        public double X { get; set; }       // automatic property for 'X' dimension of vector
+        public double Y { get; set; }       // automatic property for 'Y' dimension of vector
+        public double Z { get; set; }       // automatic property for 'Z' dimension of vector
 
-        public double Length                //property for vector length calculation
+        public double Length                // property for vector length calculation
         {
             get
             {
@@ -17,7 +17,7 @@ namespace ClassLibrary
         }
 
         /// <summary>
-        /// Constructor for Vector type
+        /// Constructor with parameters for Vector type
         /// </summary>
         /// <param name="x">'X' dimension of vector</param>
         /// <param name="y">'Y' dimension of vector</param>
@@ -30,32 +30,46 @@ namespace ClassLibrary
         }
 
         /// <summary>
-        /// Method for addition of vectors
+        /// Constructor without parameters for Vector type
         /// </summary>
-        /// <param name="first">First vector</param>
-        /// <param name="second">Second vector</param>
+        public Vector()
+        {
+            X = 0;
+            Y = 0;
+            Z = 0;
+        }
+
+        /// <summary>
+        /// Overloaded operator '+' for addition of Vector types
+        /// </summary>
+        /// <param name="first">First vector type instance</param>
+        /// <param name="second">Second vector type instance</param>
         /// <returns>New vector type instance</returns>
         public static Vector operator +(Vector first, Vector second)
         {
-            return new Vector((first.X + second.X), (first.Y + second.Y), (first.Z + second.Z));
+            return new Vector((first.X + second.X),
+                              (first.Y + second.Y),
+                              (first.Z + second.Z));
         }
 
         /// <summary>
-        /// Method for subtruction of vectors
+        /// Overloaded operator '-' for subtruction of Vector types
         /// </summary>
-        /// <param name="first">First vector</param>
-        /// <param name="second">Second vector</param>
+        /// <param name="first">First vector type instance</param>
+        /// <param name="second">Second vector type instance</param>
         /// <returns>New vector type instance</returns>
         public static Vector operator -(Vector first, Vector second)
         {
-            return new Vector((first.X - second.X), (first.Y - second.Y), (first.Z - second.Z));
+            return new Vector((first.X - second.X),
+                              (first.Y - second.Y),
+                              (first.Z - second.Z));
         }
 
         /// <summary>
-        /// Method for scalar multiplication of vectors
+        /// Overloaded operator '*' for scalar multiplication of Vector types
         /// </summary>
-        /// <param name="first">First vector</param>
-        /// <param name="second">Second vector</param>
+        /// <param name="first">First vector type instance</param>
+        /// <param name="second">Second vector type instance</param>
         /// <returns>Scalar double type</returns>
         public static double operator *(Vector first, Vector second)
         {
@@ -63,7 +77,7 @@ namespace ClassLibrary
         }
 
         /// <summary>
-        /// Method for vector multiplication of vectors
+        /// Overloaded operator '^' for vector multiplication of vectors
         /// </summary>
         /// <param name="first">First vector</param>
         /// <param name="second">Second vector</param>
@@ -76,10 +90,10 @@ namespace ClassLibrary
         }
 
         /// <summary>
-        /// Method for vector and scalar multiplication
+        /// Overloaded operator '*' for Vector type and scalar double type multiplication
         /// </summary>
-        /// <param name="vector">Vector</param>
-        /// <param name="scalar">Scalar (number)</param>
+        /// <param name="vector">Vector type instance</param>
+        /// <param name="scalar">Scalar (number) double type</param>
         /// <returns>New vector type instance</returns>
         public static Vector operator *(Vector vector, double scalar)
         {
@@ -89,10 +103,10 @@ namespace ClassLibrary
         }
 
         /// <summary>
-        /// Method for vector and scalar division
+        /// Overloaded operator '/' for Vector type and scalar double type division
         /// </summary>
-        /// <param name="vector">Vector</param>
-        /// <param name="scalar">Scalar (number)</param>
+        /// <param name="vector">Vector type instance</param>
+        /// <param name="scalar">Scalar (number) double type</param>
         /// <returns>New vector type instance</returns>
         public static Vector operator /(Vector vector, double scalar)
         {
@@ -108,6 +122,65 @@ namespace ClassLibrary
         public override string ToString()
         {
             return ($"vector ({X}; {Y}; {Z})");
+        }
+
+        /// <summary>
+        /// Overload comparison operator '=='
+        /// </summary>
+        /// <param name="first">First vector type</param>
+        /// <param name="second">Second vector type</param>
+        /// <returns>True or false</returns>
+        public static bool operator ==(Vector first, Vector second)
+        {
+            return (first.X == second.X &&
+                    first.Y == second.Y &&
+                    first.Z == second.Z);
+        }
+
+        /// <summary>
+        /// Overload comparison operator '!='
+        /// </summary>
+        /// <param name="first">First vector</param>
+        /// <param name="second">Second vector</param>
+        /// <returns>True or false</returns>
+        public static bool operator !=(Vector first, Vector second)
+        {
+            return (first.X != second.X ||
+                    first.Y != second.Y ||
+                    first.Z != second.Z);
+        }
+
+        /// <summary>
+        /// Override Equals() method
+        /// </summary>
+        /// <param name="obj">Object type</param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if(obj == null)
+            {
+                return false;
+            }
+
+            Vector vector = (Vector)obj;
+
+            if (X == vector.X && Y == vector.Y && Z == vector.Z)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Override GetHashCode() method
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return ((X + Y + Z).GetHashCode());
         }
     }
 }
