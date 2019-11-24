@@ -67,5 +67,44 @@ namespace ClassLibrary
         {
             return first + second * (-1);
         }
+
+        public static bool operator ==(Monom first, Monom second)
+        {
+            return (first.Power == second.Power && first.Coefficient == second.Coefficient);
+        }
+
+        public static bool operator !=(Monom first, Monom second)
+        {
+            return (first.Power != second.Power || first.Coefficient != second.Coefficient);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            Monom monom = (Monom)obj;
+
+            if (Power == monom.Power && Coefficient == monom.Coefficient)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return (Coefficient + Power).GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return ($"{Coefficient}x^{Power}");
+        }
     }
 }
