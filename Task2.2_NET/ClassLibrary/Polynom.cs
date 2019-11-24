@@ -5,18 +5,34 @@ namespace ClassLibrary
 {
     public class Polynom
     {
+        /// <summary>
+        /// Automatic property for list of Monom types
+        /// </summary>
         public List<Monom> Monoms { get; set; }
 
+        /// <summary>
+        /// Constructor with parameter for Polynom type
+        /// </summary>
+        /// <param name="monoms">List of Monom types</param>
         public Polynom(List<Monom> monoms)
         {
             Monoms = monoms;
         }
 
+        /// <summary>
+        /// Default constructor for Polynom type
+        /// </summary>
         public Polynom() : this(new List<Monom>())
         {
 
         }
 
+        /// <summary>
+        /// Overloaded operator '+' for for Polynom and Monom types addition
+        /// </summary>
+        /// <param name="polynom">Polynom type parameter</param>
+        /// <param name="monom">Monom type parameter</param>
+        /// <returns>New Polynom type</returns>
         public static Polynom operator +(Polynom polynom, Monom monom)
         {
             Polynom resultPolynom = new Polynom();
@@ -47,11 +63,23 @@ namespace ClassLibrary
             return resultPolynom;
         }
 
+        /// <summary>
+        /// Overloaded operator '-' for for Polynom and Monom types subtruction
+        /// </summary>
+        /// <param name="polynom">Polynom type parameter</param>
+        /// <param name="monom">Monom type parameter</param>
+        /// <returns>New Polynom type</returns>
         public static Polynom operator -(Polynom polynom, Monom monom)
         {
             return polynom + monom * (-1);
         }
 
+        /// <summary>
+        /// Overloaded operator '+' for for Polynom types addition
+        /// </summary>
+        /// <param name="first">First Polynom type parameter</param>
+        /// <param name="second">Second Polynom type parameter</param>
+        /// <returns>New Polynom type</returns>
         public static Polynom operator +(Polynom first, Polynom second)
         {
             Polynom resultPolynom = new Polynom();
@@ -69,11 +97,23 @@ namespace ClassLibrary
             return resultPolynom;
         }
 
+        /// <summary>
+        /// Overloaded operator '-' for for Polynom types subtruction
+        /// </summary>
+        /// <param name="first">First Polynom type parameter</param>
+        /// <param name="second">Second Polynom type parameter</param>
+        /// <returns>New Polynom type</returns>
         public static Polynom operator -(Polynom first, Polynom second)
         {
             return first + second * (-1);
         }
 
+        /// <summary>
+        /// Overloaded operator '*' for Polynom type and double type multiplication
+        /// </summary>
+        /// <param name="polynom">Polynom type parameter</param>
+        /// <param name="number">Double type parameter</param>
+        /// <returns>New Polynom type</returns>
         public static Polynom operator *(Polynom polynom, double number)
         {
             Polynom resultPolynom = new Polynom();
@@ -86,6 +126,12 @@ namespace ClassLibrary
             return resultPolynom;
         }
 
+        /// <summary>
+        /// Overloaded operator '/' for Polynom type and double type division
+        /// </summary>
+        /// <param name="polynom">Polynom type parameter</param>
+        /// <param name="number">Double type parameter</param>
+        /// <returns>New Polynom type</returns>
         public static Polynom operator /(Polynom polynom, double number)
         {
             Polynom resultPolynom = new Polynom();
@@ -97,6 +143,12 @@ namespace ClassLibrary
             return resultPolynom;
         }
 
+        /// <summary>
+        /// Overloaded operator '*' for for Polynom and Monom types multiplication
+        /// </summary>
+        /// <param name="polynom">Polynom type parameter</param>
+        /// <param name="monom">Monom type parameter</param>
+        /// <returns>New Polynom type</returns>
         public static Polynom operator *(Polynom polynom, Monom monom)
         {
             Polynom resultPolynom = new Polynom();
@@ -109,6 +161,12 @@ namespace ClassLibrary
             return resultPolynom;
         }
 
+        /// <summary>
+        /// Overloaded operator '*' for for Polynom types multiplication
+        /// </summary>
+        /// <param name="first">First Polynom type parameter</param>
+        /// <param name="second">Second Polynom type parameter</param>
+        /// <returns>New Polynom type</returns>
         public static Polynom operator *(Polynom first, Polynom second)
         {
             Polynom temporaryPolynom = new Polynom();
@@ -126,6 +184,12 @@ namespace ClassLibrary
             return resultPolynom;
         }
 
+        /// <summary>
+        /// Overload comparison operator '=='
+        /// </summary>
+        /// <param name="first">First Polynom type parameter</param>
+        /// <param name="second">Second Polynom type parameter</param>
+        /// <returns>Bool type</returns>
         public static bool operator ==(Polynom first, Polynom second)
         {
             if (first.Monoms.Count == second.Monoms.Count)
@@ -156,6 +220,12 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Overload comparison operator '!='
+        /// </summary>
+        /// <param name="first">First Polynom type parameter</param>
+        /// <param name="second">Second Polynom type parameter</param>
+        /// <returns>Bool type</returns>
         public static bool operator !=(Polynom first, Polynom second)
         {
             if (first.Monoms.Count == second.Monoms.Count)
@@ -186,6 +256,10 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Convertation Polynom type to String type
+        /// </summary>
+        /// <returns>String type</returns>
         private string PolynomToString()
         {
             string polynomToString = "";
@@ -206,6 +280,11 @@ namespace ClassLibrary
             return polynomToString;
         }
 
+        /// <summary>
+        /// Override Equals() method
+        /// </summary>
+        /// <param name="obj">Object type</param>
+        /// <returns>Bool type</returns>
         public override bool Equals(object obj)
         {
             if (obj == null)
@@ -243,6 +322,10 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Override GetHashCode() method
+        /// </summary>
+        /// <returns>Integer type</returns>
         public override int GetHashCode()
         {
             double sum = 0;
@@ -254,6 +337,10 @@ namespace ClassLibrary
             return sum.GetHashCode();
         }
 
+        /// <summary>
+        /// Override ToString() method
+        /// </summary>
+        /// <returns>String type</returns>
         public override string ToString()
         {
             return PolynomToString().ToString();
