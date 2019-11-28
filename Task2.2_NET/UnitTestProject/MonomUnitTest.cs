@@ -4,9 +4,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject
 {
+    /// <summary>
+    /// Class for testing Monom type units
+    /// </summary>
     [TestClass]
     public class MonomUnitTest
     {
+        /// <summary>
+        /// Test method for '*' multiplication overloaded operator for two Monom types
+        /// </summary>
         [TestMethod]
         public void MultiplicationOfMonomsOverloadedOperatorTestMethod()
         {
@@ -22,6 +28,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);  // compare result
         }
 
+        /// <summary>
+        /// Test method for '/' division overloaded operator for two Monom types
+        /// </summary>
         [TestMethod()]
         public void DivisionOfMonomsOverloadedOperatorTestMethod()
         {
@@ -37,6 +46,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);      // compare result
         }
 
+        /// <summary>
+        /// Test method for '*' Monom and number multiplication overloaded operator
+        /// </summary>
         [TestMethod]
         public void MultiplicationMonomTypeOnDoubleTypeOverloadedOperatorTestMethod()
         {
@@ -52,6 +64,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);      // compare result
         }
 
+        /// <summary>
+        /// Test method for '/' Monom and number division overloaded operator
+        /// </summary>
         [TestMethod]
         public void DivisionMonomTypeOnDoubleTypeOverloadedOperatorTestMethod()
         {
@@ -67,6 +82,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);      // compare result
         }
 
+        /// <summary>
+        /// Test method for '+' addition overloaded operator for two Monom types
+        /// </summary>
         [TestMethod]
         public void AdditionOfMonomsTypesOverloadedOperatorTestMethod()
         {
@@ -86,6 +104,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);      // compare result
         }
 
+        /// <summary>
+        /// Test method for '-' subtraction overloaded operator for two Monom types
+        /// </summary>
         [TestMethod]
         public void SubtructionOfMonomsTypesOverloadedOperatorTestMethod()
         {
@@ -105,6 +126,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);      // compare result
         }
 
+        /// <summary>
+        /// Test method for overrided Equals() method two Monom types
+        /// </summary>
         [TestMethod]
         public void MonomsEqualsOverridedMethodTestMethod()
         {

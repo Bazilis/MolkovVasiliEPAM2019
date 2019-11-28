@@ -6,7 +6,7 @@ namespace ConsoleApp
 {
     class Program
     {
-        static void Main()
+        static void Main()  //PolynomToString() method debugging
         {
             Polynom first = new Polynom(new List<Monom>()
             {

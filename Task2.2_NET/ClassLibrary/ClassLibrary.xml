@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLibrary.Monom">
+            <summary>
+            Class for describing operations with monoms
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Monom.Coefficient">
+            <summary>
+            Automatic property for coefficient of variable
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Monom.Power">
+            <summary>
+            Automatic property for power of variable
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Monom.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor with parameters for Monom type
+            </summary>
+            <param name="coefficient">Coefficient of variable</param>
+            <param name="power">Power of variable</param>
+        </member>
+        <member name="M:ClassLibrary.Monom.#ctor">
+            <summary>
+            Default constructor for Monom type
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Monom.op_Multiply(ClassLibrary.Monom,ClassLibrary.Monom)">
+            <summary>
+            Overloaded operator '*' for for Monom types multiplication
+            </summary>
+            <param name="first">First Monom type parameter</param>
+            <param name="second">Second Monom type parameter</param>
+            <returns>New Monom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Monom.op_Division(ClassLibrary.Monom,ClassLibrary.Monom)">
+            <summary>
+            Overloaded operator '/' for for Monom types division
+            </summary>
+            <param name="first">First Monom type parameter</param>
+            <param name="second">Second Monom type parameter</param>
+            <returns>New Monom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Monom.op_Multiply(ClassLibrary.Monom,System.Double)">
+            <summary>
+            Overloaded operator '*' for Monom type and double type multiplication
+            </summary>
+            <param name="monom">First Monom type parameter</param>
+            <param name="number">Second Monom type parameter</param>
+            <returns>New Monom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Monom.op_Division(ClassLibrary.Monom,System.Double)">
+            <summary>
+            Overloaded operator '/' for Monom type and double type division
+            </summary>
+            <param name="monom">First Monom type parameter</param>
+            <param name="number">Second Monom type parameter</param>
+            <returns>New Monom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Monom.op_Addition(ClassLibrary.Monom,ClassLibrary.Monom)">
+            <summary>
+            Overloaded operator '+' for for Monom types addition
+            </summary>
+            <param name="first">First Monom type parameter</param>
+            <param name="second">Second Monom type parameter</param>
+            <returns>New Polynom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Monom.op_Subtraction(ClassLibrary.Monom,ClassLibrary.Monom)">
+            <summary>
+            Overloaded operator '-' for for Monom types subtruction
+            </summary>
+            <param name="first">First Monom type parameter</param>
+            <param name="second">Second Monom type parameter</param>
+            <returns>New Polynom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Monom.op_Equality(ClassLibrary.Monom,ClassLibrary.Monom)">
+            <summary>
+            Overload comparison operator '=='
+            </summary>
+            <param name="first">First Monom type parameter</param>
+            <param name="second">Second Monom type parameter</param>
+            <returns>Bool type</returns>
+        </member>
+        <member name="M:ClassLibrary.Monom.op_Inequality(ClassLibrary.Monom,ClassLibrary.Monom)">
+            <summary>
+            Overload comparison operator '!='
+            </summary>
+            <param name="first">First Monom type parameter</param>
+            <param name="second">Second Monom type parameter</param>
+            <returns>Bool type</returns>
+        </member>
+        <member name="M:ClassLibrary.Monom.Equals(System.Object)">
+            <summary>
+            Override Equals() method
+            </summary>
+            <param name="obj">Object type</param>
+            <returns>Bool type</returns>
+        </member>
+        <member name="M:ClassLibrary.Monom.GetHashCode">
+            <summary>
+            Override GetHashCode() method
+            </summary>
+            <returns>Integer type</returns>
+        </member>
+        <member name="M:ClassLibrary.Monom.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns>String type</returns>
+        </member>
+        <member name="T:ClassLibrary.Polynom">
+            <summary>
+            Class for describing operations with polynoms
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Polynom.Monoms">
+            <summary>
+            Automatic property for list of Monom types
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Polynom.#ctor(System.Collections.Generic.List{ClassLibrary.Monom})">
+            <summary>
+            Constructor with parameter for Polynom type
+            </summary>
+            <param name="monoms">List of Monom types</param>
+        </member>
+        <member name="M:ClassLibrary.Polynom.#ctor">
+            <summary>
+            Default constructor for Polynom type
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Polynom.op_Addition(ClassLibrary.Polynom,ClassLibrary.Monom)">
+            <summary>
+            Overloaded operator '+' for for Polynom and Monom types addition
+            </summary>
+            <param name="polynom">Polynom type parameter</param>
+            <param name="monom">Monom type parameter</param>
+            <returns>New Polynom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.op_Subtraction(ClassLibrary.Polynom,ClassLibrary.Monom)">
+            <summary>
+            Overloaded operator '-' for for Polynom and Monom types subtruction
+            </summary>
+            <param name="polynom">Polynom type parameter</param>
+            <param name="monom">Monom type parameter</param>
+            <returns>New Polynom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.op_Addition(ClassLibrary.Polynom,ClassLibrary.Polynom)">
+            <summary>
+            Overloaded operator '+' for for Polynom types addition
+            </summary>
+            <param name="first">First Polynom type parameter</param>
+            <param name="second">Second Polynom type parameter</param>
+            <returns>New Polynom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.op_Subtraction(ClassLibrary.Polynom,ClassLibrary.Polynom)">
+            <summary>
+            Overloaded operator '-' for for Polynom types subtruction
+            </summary>
+            <param name="first">First Polynom type parameter</param>
+            <param name="second">Second Polynom type parameter</param>
+            <returns>New Polynom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.op_Multiply(ClassLibrary.Polynom,System.Double)">
+            <summary>
+            Overloaded operator '*' for Polynom type and double type multiplication
+            </summary>
+            <param name="polynom">Polynom type parameter</param>
+            <param name="number">Double type parameter</param>
+            <returns>New Polynom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.op_Division(ClassLibrary.Polynom,System.Double)">
+            <summary>
+            Overloaded operator '/' for Polynom type and double type division
+            </summary>
+            <param name="polynom">Polynom type parameter</param>
+            <param name="number">Double type parameter</param>
+            <returns>New Polynom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.op_Multiply(ClassLibrary.Polynom,ClassLibrary.Monom)">
+            <summary>
+            Overloaded operator '*' for for Polynom and Monom types multiplication
+            </summary>
+            <param name="polynom">Polynom type parameter</param>
+            <param name="monom">Monom type parameter</param>
+            <returns>New Polynom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.op_Multiply(ClassLibrary.Polynom,ClassLibrary.Polynom)">
+            <summary>
+            Overloaded operator '*' for for Polynom types multiplication
+            </summary>
+            <param name="first">First Polynom type parameter</param>
+            <param name="second">Second Polynom type parameter</param>
+            <returns>New Polynom type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.op_Equality(ClassLibrary.Polynom,ClassLibrary.Polynom)">
+            <summary>
+            Overload comparison operator '=='
+            </summary>
+            <param name="first">First Polynom type parameter</param>
+            <param name="second">Second Polynom type parameter</param>
+            <returns>Bool type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.op_Inequality(ClassLibrary.Polynom,ClassLibrary.Polynom)">
+            <summary>
+            Overload comparison operator '!='
+            </summary>
+            <param name="first">First Polynom type parameter</param>
+            <param name="second">Second Polynom type parameter</param>
+            <returns>Bool type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.PolynomToString">
+            <summary>
+            Convertation Polynom type to String type
+            </summary>
+            <returns>String type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.Equals(System.Object)">
+            <summary>
+            Override Equals() method
+            </summary>
+            <param name="obj">Object type</param>
+            <returns>Bool type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.GetHashCode">
+            <summary>
+            Override GetHashCode() method
+            </summary>
+            <returns>Integer type</returns>
+        </member>
+        <member name="M:ClassLibrary.Polynom.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns>String type</returns>
+        </member>
+    </members>
+</doc>

@@ -4,9 +4,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject
 {
+    /// <summary>
+    /// Class for testing Polynom type units
+    /// </summary>
     [TestClass]
     public class PolynomUnitTest
     {
+        /// <summary>
+        /// Test method for '+' Polynom and Monom addition overloaded operator
+        /// </summary>
         [TestMethod]
         public void AdditionOfPolynomAndMonomTypesOverloadedOperatorTestMethod()
         {
@@ -33,6 +39,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare result
         }
 
+        /// <summary>
+        /// Test method for '-' Polynom and Monom subtraction overloaded operator
+        /// </summary>
         [TestMethod]
         public void SubtructionOfPolynomAndMonomTypesOverloadedOperatorTestMethod()
         {
@@ -58,6 +67,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare result
         }
 
+        /// <summary>
+        /// Test method for '+' addition overloaded operator for two Polynom types
+        /// </summary>
         [TestMethod]
         public void AdditionOfPolynomTypesOverloadedOperatorTestMethod()
         {
@@ -89,6 +101,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare result
         }
 
+        /// <summary>
+        /// Test method for '-' subtraction overloaded operator for two Polynom types
+        /// </summary>
         [TestMethod]
         public void SubtructionOfPolynomTypesOverloadedOperatorTestMethod()
         {
@@ -120,6 +135,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare result
         }
 
+        /// <summary>
+        /// Test method for '*' multiplication overloaded operator for two Polynom types
+        /// </summary>
         [TestMethod]
         public void MultiplicationPolynomTypeOnDoubleTypeOverloadedOperatorTestMethod()
         {
@@ -146,6 +164,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare result
         }
 
+        /// <summary>
+        /// Test method for '/' Polynom and number division overloaded operator
+        /// </summary>
         [TestMethod]
         public void DivisionPolynomTypeOnDoubleTypeOverloadedOperatorTestMethod()
         {
@@ -172,6 +193,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare result
         }
 
+        /// <summary>
+        /// Test method for '*' Polynom and Monom multiplication overloaded operator
+        /// </summary>
         [TestMethod]
         public void MultiplicationOfPolynomAndMonomTypesOverloadedOperatorTestMethod()
         {
@@ -198,6 +222,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare result
         }
 
+        /// <summary>
+        /// Test method for '*' multiplication overloaded operator for two Polynom types
+        /// </summary>
         [TestMethod]
         public void MultiplicationOfPolynomTypesOverloadedOperatorTestMethod()
         {
@@ -229,6 +256,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare result
         }
 
+        /// <summary>
+        /// Test method for overrided Equals() method for two Polynom types
+        /// </summary>
         [TestMethod]
         public void PolynomialTestEquals()
         {

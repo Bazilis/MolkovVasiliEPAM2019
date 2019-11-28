@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace ClassLibrary
 {
+    /// <summary>
+    /// Class for describing operations with monoms
+    /// </summary>
     public class Monom
     {
         /// <summary>

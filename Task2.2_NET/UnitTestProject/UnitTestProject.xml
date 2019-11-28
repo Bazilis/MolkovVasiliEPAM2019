@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTestProject</name>
+    </assembly>
+    <members>
+        <member name="T:UnitTestProject.MonomUnitTest">
+            <summary>
+            Class for testing Monom type units
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.MonomUnitTest.MultiplicationOfMonomsOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '*' multiplication overloaded operator for two Monom types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.MonomUnitTest.DivisionOfMonomsOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '/' division overloaded operator for two Monom types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.MonomUnitTest.MultiplicationMonomTypeOnDoubleTypeOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '*' Monom and number multiplication overloaded operator
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.MonomUnitTest.DivisionMonomTypeOnDoubleTypeOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '/' Monom and number division overloaded operator
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.MonomUnitTest.AdditionOfMonomsTypesOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '+' addition overloaded operator for two Monom types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.MonomUnitTest.SubtructionOfMonomsTypesOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '-' subtraction overloaded operator for two Monom types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.MonomUnitTest.MonomsEqualsOverridedMethodTestMethod">
+            <summary>
+            Test method for overrided Equals() method two Monom types
+            </summary>
+        </member>
+        <member name="T:UnitTestProject.PolynomUnitTest">
+            <summary>
+            Class for testing Polynom type units
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.PolynomUnitTest.AdditionOfPolynomAndMonomTypesOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '+' Polynom and Monom addition overloaded operator
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.PolynomUnitTest.SubtructionOfPolynomAndMonomTypesOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '-' Polynom and Monom subtraction overloaded operator
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.PolynomUnitTest.AdditionOfPolynomTypesOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '+' addition overloaded operator for two Polynom types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.PolynomUnitTest.SubtructionOfPolynomTypesOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '-' subtraction overloaded operator for two Polynom types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.PolynomUnitTest.MultiplicationPolynomTypeOnDoubleTypeOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '*' multiplication overloaded operator for two Polynom types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.PolynomUnitTest.DivisionPolynomTypeOnDoubleTypeOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '/' Polynom and number division overloaded operator
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.PolynomUnitTest.MultiplicationOfPolynomAndMonomTypesOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '*' Polynom and Monom multiplication overloaded operator
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.PolynomUnitTest.MultiplicationOfPolynomTypesOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '*' multiplication overloaded operator for two Polynom types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.PolynomUnitTest.PolynomialTestEquals">
+            <summary>
+            Test method for overrided Equals() method for two Polynom types
+            </summary>
+        </member>
+    </members>
+</doc>
