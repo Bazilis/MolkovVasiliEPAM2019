@@ -2,13 +2,30 @@
 
 namespace ClassLibrary
 {
+    /// <summary>
+    /// Class for describing operations with 3D vectors
+    /// </summary>
     public class Vector
     {
-        public double X { get; set; }       // automatic property for 'X' dimension of vector
-        public double Y { get; set; }       // automatic property for 'Y' dimension of vector
-        public double Z { get; set; }       // automatic property for 'Z' dimension of vector
+        /// <summary>
+        /// Automatic property for 'X' dimension of vector
+        /// </summary>
+        public double X { get; set; }
 
-        public double Length                // property for vector length calculation
+        /// <summary>
+        /// Automatic property for 'Y' dimension of vector
+        /// </summary>
+        public double Y { get; set; }
+
+        /// <summary>
+        /// Automatic property for 'Z' dimension of vector
+        /// </summary>
+        public double Z { get; set; }
+
+        /// <summary>
+        /// Property for vector length calculation
+        /// </summary>
+        public double Length
         {
             get
             {

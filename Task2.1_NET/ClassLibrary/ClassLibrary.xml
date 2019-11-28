@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLibrary.Vector">
+            <summary>
+            Class for describing operations with 3D vectors
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Vector.X">
+            <summary>
+            Automatic property for 'X' dimension of vector
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Vector.Y">
+            <summary>
+            Automatic property for 'Y' dimension of vector
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Vector.Z">
+            <summary>
+            Automatic property for 'Z' dimension of vector
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Vector.Length">
+            <summary>
+            Property for vector length calculation
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Vector.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Constructor with parameters for Vector type
+            </summary>
+            <param name="x">'X' dimension of vector</param>
+            <param name="y">'Y' dimension of vector</param>
+            <param name="z">'Z' dimension of vector</param>
+        </member>
+        <member name="M:ClassLibrary.Vector.#ctor">
+            <summary>
+            Constructor without parameters for Vector type
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Vector.op_Addition(ClassLibrary.Vector,ClassLibrary.Vector)">
+            <summary>
+            Overloaded operator '+' for addition of Vector types
+            </summary>
+            <param name="first">First vector type instance</param>
+            <param name="second">Second vector type instance</param>
+            <returns>New vector type instance</returns>
+        </member>
+        <member name="M:ClassLibrary.Vector.op_Subtraction(ClassLibrary.Vector,ClassLibrary.Vector)">
+            <summary>
+            Overloaded operator '-' for subtruction of Vector types
+            </summary>
+            <param name="first">First vector type instance</param>
+            <param name="second">Second vector type instance</param>
+            <returns>New vector type instance</returns>
+        </member>
+        <member name="M:ClassLibrary.Vector.op_Multiply(ClassLibrary.Vector,ClassLibrary.Vector)">
+            <summary>
+            Overloaded operator '*' for scalar multiplication of Vector types
+            </summary>
+            <param name="first">First vector type instance</param>
+            <param name="second">Second vector type instance</param>
+            <returns>Scalar double type</returns>
+        </member>
+        <member name="M:ClassLibrary.Vector.op_ExclusiveOr(ClassLibrary.Vector,ClassLibrary.Vector)">
+            <summary>
+            Overloaded operator '^' for vector multiplication of vectors
+            </summary>
+            <param name="first">First vector</param>
+            <param name="second">Second vector</param>
+            <returns>New vector type instance</returns>
+        </member>
+        <member name="M:ClassLibrary.Vector.op_Multiply(ClassLibrary.Vector,System.Double)">
+            <summary>
+            Overloaded operator '*' for Vector type and scalar double type multiplication
+            </summary>
+            <param name="vector">Vector type instance</param>
+            <param name="scalar">Scalar (number) double type</param>
+            <returns>New vector type instance</returns>
+        </member>
+        <member name="M:ClassLibrary.Vector.op_Division(ClassLibrary.Vector,System.Double)">
+            <summary>
+            Overloaded operator '/' for Vector type and scalar double type division
+            </summary>
+            <param name="vector">Vector type instance</param>
+            <param name="scalar">Scalar (number) double type</param>
+            <returns>New vector type instance</returns>
+        </member>
+        <member name="M:ClassLibrary.Vector.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns>String type</returns>
+        </member>
+        <member name="M:ClassLibrary.Vector.op_Equality(ClassLibrary.Vector,ClassLibrary.Vector)">
+            <summary>
+            Overload comparison operator '=='
+            </summary>
+            <param name="first">First vector type</param>
+            <param name="second">Second vector type</param>
+            <returns>True or false</returns>
+        </member>
+        <member name="M:ClassLibrary.Vector.op_Inequality(ClassLibrary.Vector,ClassLibrary.Vector)">
+            <summary>
+            Overload comparison operator '!='
+            </summary>
+            <param name="first">First vector</param>
+            <param name="second">Second vector</param>
+            <returns>True or false</returns>
+        </member>
+        <member name="M:ClassLibrary.Vector.Equals(System.Object)">
+            <summary>
+            Override Equals() method
+            </summary>
+            <param name="obj">Object type</param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.Vector.GetHashCode">
+            <summary>
+            Override GetHashCode() method
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTestProject</name>
+    </assembly>
+    <members>
+        <member name="T:UnitTestProject.UnitTest">
+            <summary>
+            Class for testing units
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.AdditionOfVectorsOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '+' overloaded operator for two Vector types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.SubtructionOfVectorsOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '-' overloaded operator for two Vector types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.ScalarMultiplicationOfVectorsOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '*' scalar multiplication overloaded operator for two Vector types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.VectorMultiplicationOfVectorsOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '^' vector multiplication overloaded operator for two Vector types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.VectorAndScalarMultiplicationOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '*' vector and scalar multiplication overloaded operator for two Vector types
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.VectorAndScalarDivisionOverloadedOperatorTestMethod">
+            <summary>
+            Test method for '/' division vector on scalar overloaded operator for two Vector types
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -5,7 +5,7 @@ namespace ConsoleApp
 {
     class Program
     {
-        static void Main()
+        static void Main()      //test ToString method
         {
             Vector first = new Vector(8, 6, 9);
 

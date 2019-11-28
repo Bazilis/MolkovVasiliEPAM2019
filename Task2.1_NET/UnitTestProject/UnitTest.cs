@@ -3,10 +3,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject
 {
+    /// <summary>
+    /// Class for testing units
+    /// </summary>
     [TestClass]
     public class UnitTest
     {
-
+        /// <summary>
+        /// Test method for '+' overloaded operator for two Vector types
+        /// </summary>
         [TestMethod]
         public void AdditionOfVectorsOverloadedOperatorTestMethod()
         {
@@ -22,6 +27,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare results
         }
 
+        /// <summary>
+        /// Test method for '-' overloaded operator for two Vector types
+        /// </summary>
         [TestMethod]
         public void SubtructionOfVectorsOverloadedOperatorTestMethod()
         {
@@ -37,6 +45,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare results
         }
 
+        /// <summary>
+        /// Test method for '*' scalar multiplication overloaded operator for two Vector types
+        /// </summary>
         [TestMethod]
         public void ScalarMultiplicationOfVectorsOverloadedOperatorTestMethod()
         {
@@ -52,6 +63,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare results
         }
 
+        /// <summary>
+        /// Test method for '^' vector multiplication overloaded operator for two Vector types
+        /// </summary>
         [TestMethod]
         public void VectorMultiplicationOfVectorsOverloadedOperatorTestMethod()
         {
@@ -67,6 +81,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare results
         }
 
+        /// <summary>
+        /// Test method for '*' vector and scalar multiplication overloaded operator for two Vector types
+        /// </summary>
         [TestMethod]
         public void VectorAndScalarMultiplicationOverloadedOperatorTestMethod()
         {
@@ -82,6 +99,9 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);          // compare results
         }
 
+        /// <summary>
+        /// Test method for '/' division vector on scalar overloaded operator for two Vector types
+        /// </summary>
         [TestMethod]
         public void VectorAndScalarDivisionOverloadedOperatorTestMethod()
         {
