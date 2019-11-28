@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTestProject</name>
+    </assembly>
+    <members>
+        <member name="T:UnitTestProject.UnitTest">
+            <summary>
+            Testing units
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.VerifyGCD(System.Int32,System.Int32[])">
+            <summary>
+            Method for verifying GCD
+            </summary>
+            <param name="gcd">GCD for verification</param>
+            <param name="numbers">Set of numbers for GCD verification</param>
+            <returns>Result of verification (true or false)</returns>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.TestMethodForEuclideanGCDWithTwoParameters">
+            <summary>
+            Test method for EuclideanGCD method with two parameters
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.TestMethodForEuclideanGCDWithThreeParameters">
+            <summary>
+            Test method for EuclideanGCD method with three parameters
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.TestMethodForEuclideanGCDWithFourParameters">
+            <summary>
+            Test method for EuclideanGCD method with four parameters
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.TestMethodForEuclideanGCDWithFiveParameters">
+            <summary>
+            Test method for EuclideanGCD method with five parameters
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTest.TestMethodForSteinGCDWithTwoParameters">
+            <summary>
+            Test method for SteinGCD method with two parameters
+            </summary>
+        </member>
+    </members>
+</doc>

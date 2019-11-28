@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task01_NET</name>
+    </assembly>
+    <members>
+        <member name="T:Task01_NET.FindGCD">
+            <summary>
+            Find Greatest Common Divisor
+            </summary>
+        </member>
+        <member name="M:Task01_NET.FindGCD.EuclideanGCD(System.Int32,System.Int32,System.Double@)">
+            <summary>
+            Euclidean algorithm method for two integers and
+            output parameter for calculation time
+            </summary>
+            <param name="first">First integer</param>
+            <param name="second">Second integer</param>
+            <param name="elapsed_time">Calculation time in milliseconds</param>
+            <returns>GCD of two integers and calculation time in milliseconds</returns>
+        </member>
+        <member name="M:Task01_NET.FindGCD.EuclideanGCD(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Euclidean algorithm method for three integers
+            </summary>
+            <param name="first">First integer</param>
+            <param name="second">Second integer</param>
+            <param name="third">Third integer</param>
+            <returns>GCD of three integers</returns>
+        </member>
+        <member name="M:Task01_NET.FindGCD.EuclideanGCD(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Euclidean algorithm method for four integers using recursion
+            </summary>
+            <param name="first">First integer</param>
+            <param name="second">Second integer</param>
+            <param name="third">Third integer</param>
+            <param name="fourth">Fourth integer</param>
+            <returns>GCD of four integers</returns>
+        </member>
+        <member name="M:Task01_NET.FindGCD.EuclideanGCD(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Euclidean algorithm method for five integers using recursion
+            </summary>
+            <param name="first">First integer</param>
+            <param name="second">Second integer</param>
+            <param name="third">Third integer</param>
+            <param name="fourth">Fourth integer</param>
+            <param name="fifth">Fifth integer</param>
+            <returns>GCD of five integers</returns>
+        </member>
+        <member name="M:Task01_NET.FindGCD.SteinGCD(System.Int32,System.Int32,System.Double@)">
+            <summary>
+            Stein's algorithm method for two integers and
+            output parameter for calculation time
+            </summary>
+            <param name="first">First integer</param>
+            <param name="second">Second integer</param>
+            <param name="elapsed_time">Calculation time in milliseconds</param>
+            <returns>GCD of two integers and calculation time in milliseconds</returns>
+        </member>
+        <member name="M:Task01_NET.FindGCD.CalculationTimeCompareData(System.Int32,System.Int32,System.Double@,System.Double@)">
+            <summary>
+            Preparing data method for histogram plotting
+            </summary>
+            <param name="first">First integer for calculating GCD</param>
+            <param name="second">Second integer for calculating GCD</param>
+            <param name="euclidean_elapsed_time">Calculation time for Euclidean method</param>
+            <param name="stein_elapsed_time">Calculation time for Stein's method</param>
+            <returns>GCD of two integers and calculation time in milliseconds for both methods</returns>
+        </member>
+    </members>
+</doc>

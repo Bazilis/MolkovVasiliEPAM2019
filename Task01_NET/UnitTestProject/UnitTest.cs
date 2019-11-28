@@ -4,15 +4,18 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject
 {
+    /// <summary>
+    /// Testing units
+    /// </summary>
     [TestClass]
     public class UnitTest
     {
         // parametrs for calculating GCD 
-        int a;
-        int b;
-        int c;
-        int d;
-        int e;
+        int first;
+        int second;
+        int third;
+        int fourth;
+        int fifth;
         // flag variable
         bool ok;
         // result GCD variable
@@ -54,12 +57,12 @@ namespace UnitTestProject
         [TestMethod]
         public void TestMethodForEuclideanGCDWithTwoParameters()
         {
-            a = random.Next(-1000, 1000);       // first random input parametr
-            b = random.Next(-1001, 1001);       // second random input parametr
+            first = random.Next(-1000, 1000);       // first random input parametr
+            second = random.Next(-1001, 1001);       // second random input parametr
 
-            result = GCD.EuclideanGCD(a, b, out double time);   // result of GCD calculation
+            result = FindGCD.EuclideanGCD(first, second, out double time);   // result of GCD calculation
 
-            if (VerifyGCD(result, a, b))                        // verifying result GCD
+            if (VerifyGCD(result, first, second))                        // verifying result GCD
             {
                 ok = true;
             }
@@ -77,13 +80,13 @@ namespace UnitTestProject
         [TestMethod]
         public void TestMethodForEuclideanGCDWithThreeParameters()
         {
-            a = random.Next(-1002, 1002);                       // first random input parametr
-            b = random.Next(-1003, 1003);                       // second random input parametr
-            c = random.Next(-1004, 1004);                       // third random input parametr
+            first = random.Next(-1002, 1002);                       // first random input parametr
+            second = random.Next(-1003, 1003);                       // second random input parametr
+            third = random.Next(-1004, 1004);                       // third random input parametr
 
-            result = GCD.EuclideanGCD(a, b, c);                 // result of GCD calculation
+            result = FindGCD.EuclideanGCD(first, second, third);                 // result of GCD calculation
 
-            if (VerifyGCD(result, a, b, c))                     // verifying result GCD
+            if (VerifyGCD(result, first, second, third))                     // verifying result GCD
             {
                 ok = true;
             }
@@ -101,14 +104,14 @@ namespace UnitTestProject
         [TestMethod]
         public void TestMethodForEuclideanGCDWithFourParameters()
         {
-            a = random.Next(-1005, 1005);                       // first random input parametr
-            b = random.Next(-1006, 1006);                       // second random input parametr
-            c = random.Next(-1007, 1007);                       // third random input parametr
-            d = random.Next(-1008, 1008);                       // fourth random input parametr
+            first = random.Next(-1005, 1005);                       // first random input parametr
+            second = random.Next(-1006, 1006);                       // second random input parametr
+            third = random.Next(-1007, 1007);                       // third random input parametr
+            fourth = random.Next(-1008, 1008);                       // fourth random input parametr
 
-            result = GCD.EuclideanGCD(a, b, c, d);              // result of GCD calculation
+            result = FindGCD.EuclideanGCD(first, second, third, fourth);              // result of GCD calculation
 
-            if (VerifyGCD(result, a, b, c, d))                  // verifying result GCD
+            if (VerifyGCD(result, first, second, third, fourth))                  // verifying result GCD
             {
                 ok = true;
             }
@@ -126,15 +129,15 @@ namespace UnitTestProject
         [TestMethod]
         public void TestMethodForEuclideanGCDWithFiveParameters()
         {
-            a = random.Next(-1009, 1009);                       // first random input parametr
-            b = random.Next(-1001, 1001);                       // second random input parametr
-            c = random.Next(-1002, 1002);                       // third random input parametr
-            d = random.Next(-1003, 1003);                       // fourth random input parametr
-            e = random.Next(-1004, 1004);                       // fifth random input parametr
+            first = random.Next(-1009, 1009);                       // first random input parametr
+            second = random.Next(-1001, 1001);                       // second random input parametr
+            third = random.Next(-1002, 1002);                       // third random input parametr
+            fourth = random.Next(-1003, 1003);                       // fourth random input parametr
+            fifth = random.Next(-1004, 1004);                       // fifth random input parametr
 
-            result = GCD.EuclideanGCD(a, b, c, d, e);           // result of GCD calculation
+            result = FindGCD.EuclideanGCD(first, second, third, fourth, fifth);           // result of GCD calculation
 
-            if (VerifyGCD(result, a, b, c, d, e))               // verifying result GCD
+            if (VerifyGCD(result, first, second, third, fourth, fifth))               // verifying result GCD
             {
                 ok = true;
             }
@@ -152,12 +155,12 @@ namespace UnitTestProject
         [TestMethod]
         public void TestMethodForSteinGCDWithTwoParameters()
         {
-            a = random.Next(-1005, 1005);                       // first random input parametr
-            b = random.Next(-1006, 1006);                       // second random input parametr
+            first = random.Next(-1005, 1005);                       // first random input parametr
+            second = random.Next(-1006, 1006);                       // second random input parametr
 
-            result = GCD.SteinGCD(a, b, out double time);       // result of GCD calculation
+            result = FindGCD.SteinGCD(first, second, out double time);       // result of GCD calculation
 
-            if (VerifyGCD(result, a, b))                        // verifying result GCD
+            if (VerifyGCD(result, first, second))                        // verifying result GCD
             {
                 ok = true;
             }

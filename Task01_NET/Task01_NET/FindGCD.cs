@@ -5,115 +5,118 @@ using System.Diagnostics;
 
 namespace Task01_NET
 {
-    public class GCD                            // Greatest Common Divisor
+    /// <summary>
+    /// Find Greatest Common Divisor
+    /// </summary>
+    public class FindGCD
     {
         /// <summary>
         /// Euclidean algorithm method for two integers and
         /// output parameter for calculation time
         /// </summary>
-        /// <param name="a">First integer</param>
-        /// <param name="b">Second integer</param>
+        /// <param name="first">First integer</param>
+        /// <param name="second">Second integer</param>
         /// <param name="elapsed_time">Calculation time in milliseconds</param>
         /// <returns>GCD of two integers and calculation time in milliseconds</returns>
-        public static int EuclideanGCD(int a, int b, out double elapsed_time)
+        public static int EuclideanGCD(int first, int second, out double elapsed_time)
         {
             Stopwatch timer = new Stopwatch();  // create new stopwatch object
             timer.Start();                      // begin timing
-            a = Math.Abs(a);                    // get absolute value for 'a' parameter
-            b = Math.Abs(b);                    // get absolute value for 'b' parameter
-            while (a != b)
+            first = Math.Abs(first);            // get absolute value for first parameter
+            second = Math.Abs(second);          // get absolute value for second parameter
+            while (first != second)
             {
-                if (a > b)
+                if (first > second)
                 {
-                    a -= b;
+                    first -= second;
                 }
                 else
                 {
-                    b -= a;
+                    second -= first;
                 }
             }
-            timer.Stop();                   // stop timing
+            timer.Stop();                       // stop timing
             elapsed_time = timer.Elapsed.TotalMilliseconds;   // output elapsed time
-            return a;
+            return first;
         }
 
         /// <summary>
         /// Euclidean algorithm method for three integers
         /// </summary>
-        /// <param name="a">First integer</param>
-        /// <param name="b">Second integer</param>
-        /// <param name="c">Third integer</param>
+        /// <param name="first">First integer</param>
+        /// <param name="second">Second integer</param>
+        /// <param name="third">Third integer</param>
         /// <returns>GCD of three integers</returns>
-        public static int EuclideanGCD(int a, int b, int c)
+        public static int EuclideanGCD(int first, int second, int third)
         {
             // recursive EuclideanGCD method call with void out parameters
-            return EuclideanGCD(EuclideanGCD(a, b, out double time1), c, out double time2);
+            return EuclideanGCD(EuclideanGCD(first, second, out double time1), third, out double time2);
         }
 
         /// <summary>
         /// Euclidean algorithm method for four integers using recursion
         /// </summary>
-        /// <param name="a">First integer</param>
-        /// <param name="b">Second integer</param>
-        /// <param name="c">Third integer</param>
-        /// <param name="d">Fourth integer</param>
+        /// <param name="first">First integer</param>
+        /// <param name="second">Second integer</param>
+        /// <param name="third">Third integer</param>
+        /// <param name="fourth">Fourth integer</param>
         /// <returns>GCD of four integers</returns>
-        public static int EuclideanGCD(int a, int b, int c, int d)
+        public static int EuclideanGCD(int first, int second, int third, int fourth)
         {
             // recursive EuclideanGCD method call with void out parameter
-            return EuclideanGCD(EuclideanGCD(a, b, c), d, out double time);
+            return EuclideanGCD(EuclideanGCD(first, second, third), fourth, out double time);
         }
 
         /// <summary>
         /// Euclidean algorithm method for five integers using recursion
         /// </summary>
-        /// <param name="a">First integer</param>
-        /// <param name="b">Second integer</param>
-        /// <param name="c">Third integer</param>
-        /// <param name="d">Fourth integer</param>
-        /// <param name="e">Fifth integer</param>
+        /// <param name="first">First integer</param>
+        /// <param name="second">Second integer</param>
+        /// <param name="third">Third integer</param>
+        /// <param name="fourth">Fourth integer</param>
+        /// <param name="fifth">Fifth integer</param>
         /// <returns>GCD of five integers</returns>
-        public static int EuclideanGCD(int a, int b, int c, int d, int e)
+        public static int EuclideanGCD(int first, int second, int third, int fourth, int fifth)
         {
             // recursive EuclideanGCD method call with void out parameter
-            return EuclideanGCD(EuclideanGCD(a, b, c, d), e, out double time);
+            return EuclideanGCD(EuclideanGCD(first, second, third, fourth), fifth, out double time);
         }
 
         /// <summary>
         /// Stein's algorithm method for two integers and
         /// output parameter for calculation time
         /// </summary>
-        /// <param name="a">First integer</param>
-        /// <param name="b">Second integer</param>
+        /// <param name="first">First integer</param>
+        /// <param name="second">Second integer</param>
         /// <param name="elapsed_time">Calculation time in milliseconds</param>
         /// <returns>GCD of two integers and calculation time in milliseconds</returns>
-        public static int SteinGCD(int a, int b, out double elapsed_time)
+        public static int SteinGCD(int first, int second, out double elapsed_time)
         {
             Stopwatch timer = new Stopwatch();          // create new stopwatch object
             timer.Start();                              // begin timing
 
-            if (a == 0)
+            if (first == 0)
             {
                 timer.Stop();                           // stop timing
                 elapsed_time = timer.Elapsed.TotalMilliseconds;           // output elapsed time
-                return Math.Abs(b);                     // GCD(0, b) = b
+                return Math.Abs(second);                     // GCD(0, b) = b
             }
 
-            if (b == 0)
+            if (second == 0)
             {
                 timer.Stop();                           // stop timing
                 elapsed_time = timer.Elapsed.TotalMilliseconds;           // output elapsed time
-                return Math.Abs(a);                     // GCD(a, 0) = a
+                return Math.Abs(first);                     // GCD(a, 0) = a
             }
 
-            if (a == b)
+            if (first == second)
             {
                 timer.Stop();                           // stop timing
                 elapsed_time = timer.Elapsed.TotalMilliseconds;           // output elapsed time
-                return Math.Abs(a);                     // GCD(a, a) = a
+                return Math.Abs(first);                     // GCD(a, a) = a
             }
 
-            if (a == 1 || b == 1)
+            if (first == 1 || second == 1)
             {
                 timer.Stop();                           // stop timing
                 elapsed_time = timer.Elapsed.TotalMilliseconds;           // output elapsed time
@@ -121,48 +124,48 @@ namespace Task01_NET
             }
 
             int k = 1;                                  // binary disproportion counter
-            a = Math.Abs(a);                            // get absolute value for 'a' parameter
-            b = Math.Abs(b);                            // get absolute value for 'b' parameter
-            while ((a != 0) && (b != 0))
+            first = Math.Abs(first);                            // get absolute value for 'a' parameter
+            second = Math.Abs(second);                            // get absolute value for 'b' parameter
+            while ((first != 0) && (second != 0))
             {
-                while ((a % 2 == 0) && (b % 2 == 0))    // GCD(a, b) = 2 * GCD(a / 2, b / 2)
+                while ((first % 2 == 0) && (second % 2 == 0))    // GCD(a, b) = 2 * GCD(a / 2, b / 2)
                 {
-                    a /= 2;
-                    b /= 2;
+                    first /= 2;
+                    second /= 2;
                     k *= 2;                             // double increase binary disproportion counter
                 }
-                while (a % 2 == 0) a /= 2;              // GCD(a, b) = GCD(a / 2, b)
-                while (b % 2 == 0) b /= 2;              // GCD(a, b) = GCD(a, b / 2)
-                if (a >= b)
+                while (first % 2 == 0) first /= 2;              // GCD(a, b) = GCD(a / 2, b)
+                while (second % 2 == 0) second /= 2;              // GCD(a, b) = GCD(a, b / 2)
+                if (first >= second)
                 {
-                    a -= b;                             // GCD(a, b) = GCD((a - b), b)
+                    first -= second;                             // GCD(a, b) = GCD((a - b), b)
                 }
                 else
                 {
-                    b -= a;                             // GCD(a, b) = GCD(a, (b - a))
+                    second -= first;                             // GCD(a, b) = GCD(a, (b - a))
                 }
             }
             timer.Stop();                               // stop timing
             elapsed_time = timer.Elapsed.TotalMilliseconds;               // output elapsed time
-            return b * k;
+            return second * k;
         }
 
         /// <summary>
         /// Preparing data method for histogram plotting
         /// </summary>
-        /// <param name="a">First integer for calculating GCD</param>
-        /// <param name="b">Second integer for calculating GCD</param>
+        /// <param name="first">First integer for calculating GCD</param>
+        /// <param name="second">Second integer for calculating GCD</param>
         /// <param name="euclidean_elapsed_time">Calculation time for Euclidean method</param>
         /// <param name="stein_elapsed_time">Calculation time for Stein's method</param>
         /// <returns>GCD of two integers and calculation time in milliseconds for both methods</returns>
-        public static int CalculationTimeCompareData(int a, int b, out double euclidean_elapsed_time, out double stein_elapsed_time)
+        public static int CalculationTimeCompareData(int first, int second, out double euclidean_elapsed_time, out double stein_elapsed_time)
         {
 
-            int gcd = EuclideanGCD(a, b, out double x);
+            int gcd = EuclideanGCD(first, second, out double x);
             euclidean_elapsed_time = x;                     // return calculation time in milliseconds for Euclidean method
 
-            SteinGCD(a, b, out double y);
-            stein_elapsed_time =y;                          // return calculation time in milliseconds for Stein's method
+            SteinGCD(first, second, out double y);
+            stein_elapsed_time = y;                         // return calculation time in milliseconds for Stein's method
 
             return gcd;                                     // return GCD
         }

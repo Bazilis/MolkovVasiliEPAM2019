@@ -4,7 +4,7 @@ namespace Task01_NET
 {
     class Program
     {
-        static void Main()
+        static void Main()  //just for simple tests
         {
             Console.WriteLine("Enter two integers");
 
@@ -12,7 +12,7 @@ namespace Task01_NET
 
             int b = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("{0} {1} {2}", GCD.CalculationTimeCompareData(a, b, out double x, out double y), x, y);
+            Console.WriteLine("{0} {1} {2}", FindGCD.CalculationTimeCompareData(a, b, out double x, out double y), x, y);
 
             Console.ReadLine();
         }
