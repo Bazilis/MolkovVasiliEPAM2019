@@ -7,8 +7,8 @@
     <ProjectGuid>{03DC97C0-AA1C-442C-A87F-9C9E0B61112C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AbstractClassesLibrary</RootNamespace>
-    <AssemblyName>AbstractClassesLibrary</AssemblyName>
+    <RootNamespace>ClassLibrary</RootNamespace>
+    <AssemblyName>ClassLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,12 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractCircle.cs" />
-    <Compile Include="AbstractEquilateralTriangle.cs" />
-    <Compile Include="AbstractFigure.cs" />
-    <Compile Include="AbstractIsoscelesTriangle.cs" />
-    <Compile Include="AbstractRectangle.cs" />
-    <Compile Include="AbstractTriangle.cs" />
+    <Compile Include="AbstractClasses\AbstractCircle.cs" />
+    <Compile Include="AbstractClasses\AbstractEquilateralTriangle.cs" />
+    <Compile Include="AbstractClasses\AbstractFigure.cs" />
+    <Compile Include="AbstractClasses\AbstractIsoscelesTriangle.cs" />
+    <Compile Include="AbstractClasses\AbstractRectangle.cs" />
+    <Compile Include="AbstractClasses\AbstractTriangle.cs" />
+    <Compile Include="ExceptionClasses\CreationException.cs" />
+    <Compile Include="FilmFigureClasses\FilmCircle.cs" />
+    <Compile Include="FilmFigureClasses\FilmEquilateralTriangle.cs" />
+    <Compile Include="FilmFigureClasses\FilmIsoscelesTriangle.cs" />
+    <Compile Include="FilmFigureClasses\FilmRectangle.cs" />
+    <Compile Include="FilmFigureClasses\FilmTriangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
