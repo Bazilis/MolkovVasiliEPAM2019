@@ -48,11 +48,18 @@
     <Compile Include="AbstractClasses\AbstractRectangle.cs" />
     <Compile Include="AbstractClasses\AbstractTriangle.cs" />
     <Compile Include="ExceptionClasses\CreationException.cs" />
+    <Compile Include="ExceptionClasses\PaintException.cs" />
     <Compile Include="FilmFigureClasses\FilmCircle.cs" />
     <Compile Include="FilmFigureClasses\FilmEquilateralTriangle.cs" />
     <Compile Include="FilmFigureClasses\FilmIsoscelesTriangle.cs" />
     <Compile Include="FilmFigureClasses\FilmRectangle.cs" />
     <Compile Include="FilmFigureClasses\FilmTriangle.cs" />
+    <Compile Include="PaperFigureClasses\IPainted.cs" />
+    <Compile Include="PaperFigureClasses\PaperCircle.cs" />
+    <Compile Include="PaperFigureClasses\PaperEquilateralTriangle.cs" />
+    <Compile Include="PaperFigureClasses\PaperIsoscelesTriangle.cs" />
+    <Compile Include="PaperFigureClasses\PaperRectangle.cs" />
+    <Compile Include="PaperFigureClasses\PaperTriangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

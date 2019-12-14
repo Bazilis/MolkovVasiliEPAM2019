@@ -1,4 +1,5 @@
 ﻿using System;
+using ClassLibrary.PaperFigureClasses;
 
 namespace ClassLibrary.AbstractClasses
 {
@@ -16,7 +17,8 @@ namespace ClassLibrary.AbstractClasses
             }
 
             return (obj is AbstractFigure) && (this.GetType() == obj.GetType())
-                                           && (this.GetArea() == (obj as AbstractFigure).GetArea());
+                                           && (this.GetArea() == (obj as AbstractFigure).GetArea())
+                                           && ((this as IPainted).FigureColor == (obj as IPainted).FigureColor);
         }
 
         public override int GetHashCode()
