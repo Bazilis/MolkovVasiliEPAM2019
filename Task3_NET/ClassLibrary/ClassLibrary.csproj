@@ -47,6 +47,8 @@
     <Compile Include="AbstractClasses\AbstractIsoscelesTriangle.cs" />
     <Compile Include="AbstractClasses\AbstractRectangle.cs" />
     <Compile Include="AbstractClasses\AbstractTriangle.cs" />
+    <Compile Include="BoxWithFigures.cs" />
+    <Compile Include="ExceptionClasses\BoxWithFiguresException.cs" />
     <Compile Include="ExceptionClasses\CreationException.cs" />
     <Compile Include="ExceptionClasses\PaintException.cs" />
     <Compile Include="FilmFigureClasses\FilmCircle.cs" />
