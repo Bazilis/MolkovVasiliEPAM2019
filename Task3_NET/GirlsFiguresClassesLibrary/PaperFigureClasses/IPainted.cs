@@ -12,7 +12,7 @@ namespace ClassLibrary.PaperFigureClasses
     /// </summary>
     public enum Colors
     {
-        Black,          //  0   The color black     (DEFAULT COLOR)
+        Black,          //  0   The color black
         DarkBlue,       //  1   The color dark blue
         DarkGreen,      //  2 	The color dark green
         DarkCyan,       //  3 	The color dark cyan (dark blue-green)

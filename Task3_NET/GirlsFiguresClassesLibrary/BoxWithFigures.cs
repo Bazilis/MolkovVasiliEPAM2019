@@ -146,34 +146,46 @@ namespace ClassLibrary
 
         public void WriteAllFiguresToXmlFileFromBoxByStream(string xmlFilePath)
         {
-            StreamsOutput.WriteToXmlFileFromBox(this, xmlFilePath);
+            StreamsInputOutput.WriteToXmlFileFromBox(this, xmlFilePath);
         }
 
         public void WriteAllPaperFiguresToXmlFileFromBoxByStream(string xmlFilePath)
         {
-            StreamsOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllPaperFigures()), xmlFilePath);
+            StreamsInputOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllPaperFigures()), xmlFilePath);
         }
 
         public void WriteAllFilmFiguresToXmlFileFromBoxByStream(string xmlFilePath)
         {
-            StreamsOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllFilmFigures()), xmlFilePath);
+            StreamsInputOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllFilmFigures()), xmlFilePath);
         }
 
 
 
         public void WriteAllFiguresToXmlFileFromBoxByXml(string xmlFilePath)
         {
-            XmlOutput.WriteToXmlFileFromBox(this, xmlFilePath);
+            XmlInputOutput.WriteToXmlFileFromBox(this, xmlFilePath);
         }
 
         public void WriteAllPaperFiguresToXmlFileFromBoxByXml(string xmlFilePath)
         {
-            XmlOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllPaperFigures()), xmlFilePath);
+            XmlInputOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllPaperFigures()), xmlFilePath);
         }
 
         public void WriteAllFilmFiguresToXmlFileFromBoxByXml(string xmlFilePath)
         {
-            XmlOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllFilmFigures()), xmlFilePath);
+            XmlInputOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllFilmFigures()), xmlFilePath);
+        }
+
+
+
+        public void ReadAllFiguresFromXmlFileToBoxByStream(string xmlFilePath)
+        {
+            Figures = StreamsInputOutput.ReadFromXmlFileToList(xmlFilePath);
+        }
+
+        public void ReadAllFiguresFromXmlFileToBoxByXml(string xmlFilePath)
+        {
+            Figures = XmlInputOutput.ReadFromXmlFileToList(xmlFilePath);
         }
     }
 }
