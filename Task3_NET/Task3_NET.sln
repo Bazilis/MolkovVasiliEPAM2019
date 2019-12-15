@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GirlsFiguresClassesLibrary", "GirlsFiguresClassesLibrary\GirlsFiguresClassesLibrary.csproj", "{03DC97C0-AA1C-442C-A87F-9C9E0B61112C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{89287F8D-EC19-45AE-9EAA-C6527AC93B08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{03DC97C0-AA1C-442C-A87F-9C9E0B61112C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03DC97C0-AA1C-442C-A87F-9C9E0B61112C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03DC97C0-AA1C-442C-A87F-9C9E0B61112C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89287F8D-EC19-45AE-9EAA-C6527AC93B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89287F8D-EC19-45AE-9EAA-C6527AC93B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89287F8D-EC19-45AE-9EAA-C6527AC93B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89287F8D-EC19-45AE-9EAA-C6527AC93B08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
