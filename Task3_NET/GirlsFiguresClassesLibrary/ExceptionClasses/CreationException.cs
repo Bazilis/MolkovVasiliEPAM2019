@@ -16,12 +16,22 @@ namespace ClassLibrary.ExceptionClasses
 
         }
 
+        /// <summary>
+        /// Method, that checks, when creating one figure from another whether the colors of the figures match
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
         public static void ColorsHandler(Colors first, Colors second)
         {
             if (first != second)
                 throw new CreationException($"Impossible to create a '{second.ToString()}' figure from a '{first.ToString()}' figure");
         }
 
+        /// <summary>
+        /// Method, that checks, when creating one figure from another whether the figures material add area matches
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
         public static void FiguresHandler(AbstractFigure first, AbstractFigure second)
         {
             if ((first is IPainted) != (second is IPainted))

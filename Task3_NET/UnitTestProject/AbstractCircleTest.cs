@@ -6,9 +6,15 @@ using ClassLibrary.ExceptionClasses;
 
 namespace UnitTestProject
 {
+    /// <summary>
+    /// Test class for AbstractCircle class
+    /// </summary>
     [TestClass]
     public class AbstractCircleTest
     {
+        /// <summary>
+        /// Test method for AbstractCircle class constructor without parameters, catch CreationException
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(CreationException))]
         public void TestMethodForAbstractCircleConstructorWithoutParameters()
@@ -16,6 +22,10 @@ namespace UnitTestProject
             _ = new FilmCircle();
         }
 
+        /// <summary>
+        /// Test method for AbstractCircle class constructor with parameters, catch CreationException
+        /// </summary>
+        /// <param name="circleRadius"></param>
         [DataTestMethod]
         [DataRow(0)]
         [DataRow(-2)]
@@ -25,6 +35,12 @@ namespace UnitTestProject
             _ = new FilmCircle(circleRadius);
         }
 
+        /// <summary>
+        /// Test method for AbstractCircle class constructor with parameters for creating circle from other figure, catch CreationException
+        /// </summary>
+        /// <param name="circleRadius"></param>
+        /// <param name="rectangleFirstSide"></param>
+        /// <param name="rectangleSecondSide"></param>
         [DataTestMethod]
         [DataRow(10, 2, 3)]
         [DataRow(15, 3, 4)]
@@ -37,6 +53,11 @@ namespace UnitTestProject
             _ = new FilmCircle(circleRadius, filmRectangle);
         }
 
+        /// <summary>
+        /// Test method for AbstractCircle class GetPerimeter() method
+        /// </summary>
+        /// <param name="circleRadius"></param>
+        /// <param name="circlePerimetr"></param>
         [DataTestMethod]
         [DataRow(2.3, 14.4513)]
         [DataRow(4.5, 28.2743)]
@@ -54,6 +75,11 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);
         }
 
+        /// <summary>
+        /// Test method for AbstractCircle class GetArea() method
+        /// </summary>
+        /// <param name="circleRadius"></param>
+        /// <param name="circleArea"></param>
         [DataTestMethod]
         [DataRow(2.3, 16.619)]
         [DataRow(4.5, 63.6173)]

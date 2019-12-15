@@ -5,6 +5,9 @@ namespace ClassLibrary.FilmFigureClasses
 {
     public class FilmEquilateralTriangle : AbstractEquilateralTriangle
     {
+        /// <summary>
+        /// Class for film equilateral triangle, inherited from AbstractEquilateralTriangle class
+        /// </summary>
         public FilmEquilateralTriangle()
         {
 

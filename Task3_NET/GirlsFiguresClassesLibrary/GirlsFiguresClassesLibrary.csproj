@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>GirlsFiguresClassesLibrary.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,8 +48,8 @@
     <Compile Include="AbstractClasses\AbstractIsoscelesTriangle.cs" />
     <Compile Include="AbstractClasses\AbstractRectangle.cs" />
     <Compile Include="AbstractClasses\AbstractTriangle.cs" />
-    <Compile Include="BoxWithFigures.cs" />
-    <Compile Include="ExceptionClasses\BoxWithFiguresException.cs" />
+    <Compile Include="GirlsBoxWithFigures.cs" />
+    <Compile Include="ExceptionClasses\GirlsBoxWithFiguresException.cs" />
     <Compile Include="ExceptionClasses\CreationException.cs" />
     <Compile Include="ExceptionClasses\InputOutputException.cs" />
     <Compile Include="ExceptionClasses\PaintException.cs" />

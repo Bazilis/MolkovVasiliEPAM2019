@@ -1,0 +1,813 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLibrary.AbstractClasses.AbstractCircle">
+            <summary>
+            Base class for creating circles, inherited from AbstractFigure class
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.AbstractClasses.AbstractCircle.Radius">
+            <summary>
+            Radius of circle
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractCircle.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractCircle.#ctor(System.Double)">
+            <summary>
+            Constructor with parameter
+            </summary>
+            <param name="radius"></param>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractCircle.#ctor(System.Double,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating circle from other figure
+            </summary>
+            <param name="radius"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractCircle.GetPerimeter">
+            <summary>
+            Override GetPerimeter() method for calculating circle perimeter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractCircle.GetArea">
+            <summary>
+            Override GetArea() method for calculating circle area
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractCircle.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.AbstractClasses.AbstractEquilateralTriangle">
+            <summary>
+            Base class for creating equilateral triangleы, inherited from AbstractFigure class
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.AbstractClasses.AbstractEquilateralTriangle.Side">
+            <summary>
+            Side of equilateral triangle (all sides of equilateral triangle are equal)
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractEquilateralTriangle.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractEquilateralTriangle.#ctor(System.Double)">
+            <summary>
+            Constructor with parameter
+            </summary>
+            <param name="side"></param>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractEquilateralTriangle.#ctor(System.Double,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating equilateral triangle from other figure
+            </summary>
+            <param name="side"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractEquilateralTriangle.GetPerimeter">
+            <summary>
+            Override GetPerimeter() method for calculating equilateral triangle perimeter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractEquilateralTriangle.GetArea">
+            <summary>
+            Override GetArea() method for calculating equilateral triangle area
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractEquilateralTriangle.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.AbstractClasses.AbstractFigure">
+            <summary>
+            Base class for any figure
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractFigure.GetPerimeter">
+            <summary>
+            Abstract method for obtaining the perimeter of any figure
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractFigure.GetArea">
+            <summary>
+            Abstract method for obtaining the area of any figure
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractFigure.Equals(System.Object)">
+            <summary>
+            Abstract method for comparing figures
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractFigure.GetHashCode">
+            <summary>
+            Override GetHashCode() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractFigure.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.AbstractClasses.AbstractIsoscelesTriangle">
+            <summary>
+            Base class for creating isosceles triangle, inherited from AbstractFigure class
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.AbstractClasses.AbstractIsoscelesTriangle.FirstAndSecondSides">
+            <summary>
+            First and second sides of isosceles triangle (they are equal)
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.AbstractClasses.AbstractIsoscelesTriangle.ThirdSide">
+            <summary>
+            Third side of isosceles triangle (base of triangle)
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractIsoscelesTriangle.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractIsoscelesTriangle.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor with parameters and checking isosceles triangle for existanse
+            </summary>
+            <param name="firstAndSecondSides"></param>
+            <param name="thirdSide"></param>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractIsoscelesTriangle.#ctor(System.Double,System.Double,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating isosceles triangle from other figure
+            </summary>
+            <param name="firstAndSecondSides"></param>
+            <param name="thirdSide"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractIsoscelesTriangle.GetPerimeter">
+            <summary>
+            Override GetPerimeter() method for calculating isosceles triangle perimeter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractIsoscelesTriangle.GetArea">
+            <summary>
+            Override GetArea() method for calculating isosceles triangle area
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractIsoscelesTriangle.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.AbstractClasses.AbstractRectangle">
+            <summary>
+            Base class for creating rectangle, inherited from AbstractFigure class
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.AbstractClasses.AbstractRectangle.FirstSide">
+            <summary>
+            First side of rectangle
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.AbstractClasses.AbstractRectangle.SecondSide">
+            <summary>
+            Second side of rectangle
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractRectangle.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractRectangle.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractRectangle.#ctor(System.Double,System.Double,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating rectangle from other figure
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractRectangle.GetPerimeter">
+            <summary>
+            Override GetPerimeter() method for calculating rectangle perimeter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractRectangle.GetArea">
+            <summary>
+            Override GetArea() method for calculating rectangle area
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractRectangle.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.AbstractClasses.AbstractTriangle">
+            <summary>
+            Base class for creating triangle, inherited from AbstractFigure class
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.AbstractClasses.AbstractTriangle.FirstSide">
+            <summary>
+            First side of triangle
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.AbstractClasses.AbstractTriangle.SecondSide">
+            <summary>
+            Second side of triangle
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.AbstractClasses.AbstractTriangle.ThirdSide">
+            <summary>
+            Third side of triangle
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractTriangle.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractTriangle.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Constructor with parameters and checking triangle for existanse
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+            <param name="thirdSide"></param>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractTriangle.#ctor(System.Double,System.Double,System.Double,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating triangle from other figure
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+            <param name="thirdSide"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractTriangle.GetPerimeter">
+            <summary>
+            Override GetPerimeter() method for calculating triangle perimeter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractTriangle.GetArea">
+            <summary>
+            Override GetArea() method for calculating triangle area
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.AbstractClasses.AbstractTriangle.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.GirlsBoxWithFigures">
+            <summary>
+            Class for storing a list of abstract figures and performing operations with them
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.GirlsBoxWithFigures.Figures">
+            <summary>
+            List of abstract figures
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.#ctor(System.Collections.Generic.List{ClassLibrary.AbstractClasses.AbstractFigure})">
+            <summary>
+            Constructor with parameter
+            </summary>
+            <param name="figures"></param>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.AddFigure(ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Method for adding figures to box
+            </summary>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.ViewByNumber(System.Int32)">
+            <summary>
+            Method for viewing figures by it's number
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.ExtractByNumber(System.Int32)">
+            <summary>
+            Method for extracting figures from box by it's number
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.ReplaceByNumberOnFigure(System.Int32,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Method for replacing figure by it's number on another figure
+            </summary>
+            <param name="number"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.FindEquivalentFigure(ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Method for finding equivalent figure in the box
+            </summary>
+            <param name="figure"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.FiguresCount">
+            <summary>
+            Method for find out figures count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.SumAllFiguresPerimeters">
+            <summary>
+            Method for summation perimeters of all figures in the box
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.SumAllFiguresAreas">
+            <summary>
+            Method for summation areas of all figures in the box
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.GetAllCircles">
+            <summary>
+            Method for getting all circles from box to list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.GetAllPaperFigures">
+            <summary>
+            Method for getting all paper figures from box to list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.GetAllFilmFigures">
+            <summary>
+            Method for getting all film figures from box to list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.WriteAllFiguresToXmlFileFromBoxByStream(System.String)">
+            <summary>
+            Method for serialization all figures from the box to XML-file using StreamWriter class
+            </summary>
+            <param name="xmlFilePath"></param>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.WriteAllPaperFiguresToXmlFileFromBoxByStream(System.String)">
+            <summary>
+            Method for serialization all paper figures from the box to XML-file using StreamWriter class
+            </summary>
+            <param name="xmlFilePath"></param>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.WriteAllFilmFiguresToXmlFileFromBoxByStream(System.String)">
+            <summary>
+            Method for serialization all film figures from the box to XML-file using StreamWriter class
+            </summary>
+            <param name="xmlFilePath"></param>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.WriteAllFiguresToXmlFileFromBoxByXml(System.String)">
+            <summary>
+            Method for serialization all figures from the box to XML-file using XmlWriter class
+            </summary>
+            <param name="xmlFilePath"></param>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.WriteAllPaperFiguresToXmlFileFromBoxByXml(System.String)">
+            <summary>
+            Method for serialization all paper figures from the box to XML-file using XmlWriter class
+            </summary>
+            <param name="xmlFilePath"></param>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.WriteAllFilmFiguresToXmlFileFromBoxByXml(System.String)">
+            <summary>
+            Method for serialization all film figures from the box to XML-file using XmlWriter class
+            </summary>
+            <param name="xmlFilePath"></param>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.ReadAllFiguresFromXmlFileToBoxByStream(System.String)">
+            <summary>
+            Method for deserialization list of abstract figures from XML-file using StreamReader class
+            </summary>
+            <param name="xmlFilePath"></param>
+        </member>
+        <member name="M:ClassLibrary.GirlsBoxWithFigures.ReadAllFiguresFromXmlFileToBoxByXml(System.String)">
+            <summary>
+            Method for deserialization list of abstract figures from XML-file using XmlReader class
+            </summary>
+            <param name="xmlFilePath"></param>
+        </member>
+        <member name="M:ClassLibrary.ExceptionClasses.CreationException.ColorsHandler(ClassLibrary.PaperFigureClasses.Colors,ClassLibrary.PaperFigureClasses.Colors)">
+            <summary>
+            Method, that checks, when creating one figure from another whether the colors of the figures match
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:ClassLibrary.ExceptionClasses.CreationException.FiguresHandler(ClassLibrary.AbstractClasses.AbstractFigure,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Method, that checks, when creating one figure from another whether the figures material add area matches
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+        </member>
+        <member name="T:ClassLibrary.FilmFigureClasses.FilmCircle">
+            <summary>
+            Class for film circle, inherited from AbstractCircle class
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.FilmFigureClasses.FilmEquilateralTriangle.#ctor">
+            <summary>
+            Class for film equilateral triangle, inherited from AbstractEquilateralTriangle class
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.FilmFigureClasses.FilmIsoscelesTriangle">
+            <summary>
+            Class for film isosceles triangle, inherited from AbstractIsoscelesTriangle class
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.FilmFigureClasses.FilmRectangle">
+            <summary>
+            Class for film rectangle, inherited from AbstractRectangle class
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.FilmFigureClasses.FilmTriangle">
+            <summary>
+            Class for film triangle, inherited from AbstractTriangle class
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.InputOutputClasses.StreamsInputOutput">
+            <summary>
+            Static class for serialization/deserialization GirlsBoxWithFigures class instance to XML-file using StreamWriter/StreamReader classes
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.InputOutputClasses.StreamsInputOutput.WriteToXmlFileFromBox(ClassLibrary.GirlsBoxWithFigures,System.String)">
+            <summary>
+            Static method for serialization GirlsBoxWithFigures class instance to XML-file using StreamWriter class
+            </summary>
+            <param name="box"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:ClassLibrary.InputOutputClasses.StreamsInputOutput.ReadFromXmlFileToList(System.String)">
+            <summary>
+            Static method for deserialization list of abstract figures from XML-file using StreamReader class
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.InputOutputClasses.StringsParser">
+            <summary>
+            Static class for deserialization figures and colors instances from strings
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.InputOutputClasses.StringsParser.GetColorFromString(System.String)">
+            <summary>
+            Static method convert String type name of color to enum Colors type
+            </summary>
+            <param name="figureColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.InputOutputClasses.StringsParser.GetFigureFromString(System.String)">
+            <summary>
+            Static method convert String type of abstract figure to AbstractFigure type
+            </summary>
+            <param name="inputString"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.InputOutputClasses.XmlInputOutput">
+            <summary>
+            Static class for serialization/deserialization GirlsBoxWithFigures class instance to XML-file using XmlWriter/XmlReader classes
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.InputOutputClasses.XmlInputOutput.WriteToXmlFileFromBox(ClassLibrary.GirlsBoxWithFigures,System.String)">
+            <summary>
+            Static method for serialization GirlsBoxWithFigures class instance to XML-file using XmlWriter class
+            </summary>
+            <param name="box"></param>
+            <param name="xmlFilePath"></param>
+        </member>
+        <member name="M:ClassLibrary.InputOutputClasses.XmlInputOutput.ReadFromXmlFileToList(System.String)">
+            <summary>
+            Static method for deserialization list of abstract figures from XML-file using XmlReader class
+            </summary>
+            <param name="xmlFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.PaperFigureClasses.IPainted">
+            <summary>
+            Interface for painting figures
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.PaperFigureClasses.IPainted.FigureColor">
+            <summary>
+            Color of figure
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.PaperFigureClasses.Colors">
+            <summary>
+             Enum type with 16 Colors fields copied from https://docs.microsoft.com/en-us/dotnet/api/system.consolecolor
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.PaperFigureClasses.PaperCircle">
+            <summary>
+            Class for paper circle, inherited from AbstractCircle class and implements interface IPainted
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.PaperFigureClasses.PaperCircle.FigureColor">
+            <summary>
+            Color of paper circle
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperCircle.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperCircle.#ctor(System.Double)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="radius"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperCircle.#ctor(System.Double,ClassLibrary.PaperFigureClasses.Colors)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="radius"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperCircle.#ctor(System.Double,ClassLibrary.PaperFigureClasses.Colors,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating paper circle from other figure
+            </summary>
+            <param name="radius"></param>
+            <param name="color"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperCircle.#ctor(System.Double,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating white color (default color) paper circle from other figure
+            </summary>
+            <param name="radius"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperCircle.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.PaperFigureClasses.PaperEquilateralTriangle">
+            <summary>
+            Class for paper equilateral triangle, inherited from AbstractEquilateralTriangle class and implements interface IPainted
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.PaperFigureClasses.PaperEquilateralTriangle.FigureColor">
+            <summary>
+            Color of paper equilateral triangle
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperEquilateralTriangle.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperEquilateralTriangle.#ctor(System.Double)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="side"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperEquilateralTriangle.#ctor(System.Double,ClassLibrary.PaperFigureClasses.Colors)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="side"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperEquilateralTriangle.#ctor(System.Double,ClassLibrary.PaperFigureClasses.Colors,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating paper equilateral triangle from other figure
+            </summary>
+            <param name="side"></param>
+            <param name="color"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperEquilateralTriangle.#ctor(System.Double,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating white color (default color) paper equilateral triangle from other figure
+            </summary>
+            <param name="side"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperEquilateralTriangle.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.PaperFigureClasses.PaperIsoscelesTriangle">
+            <summary>
+            Class for paper isosceles triangle, inherited from AbstractIsoscelesTriangle class and implements interface IPainted
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.PaperFigureClasses.PaperIsoscelesTriangle.FigureColor">
+            <summary>
+            Color of paper isosceles triangle
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperIsoscelesTriangle.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperIsoscelesTriangle.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="firstAndSecondSides"></param>
+            <param name="thirdSide"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperIsoscelesTriangle.#ctor(System.Double,System.Double,ClassLibrary.PaperFigureClasses.Colors)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="firstAndSecondSides"></param>
+            <param name="thirdSide"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperIsoscelesTriangle.#ctor(System.Double,System.Double,ClassLibrary.PaperFigureClasses.Colors,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating paper isosceles triangle from other figure
+            </summary>
+            <param name="firstAndSecondSides"></param>
+            <param name="thirdSide"></param>
+            <param name="color"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperIsoscelesTriangle.#ctor(System.Double,System.Double,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating white color (default color) paper isosceles triangle from other figure
+            </summary>
+            <param name="firstAndSecondSides"></param>
+            <param name="thirdSide"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperIsoscelesTriangle.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.PaperFigureClasses.PaperRectangle">
+            <summary>
+            Class for paper rectangle, inherited from AbstractRectangle class and implements interface IPainted
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.PaperFigureClasses.PaperRectangle.FigureColor">
+            <summary>
+            Color of paper rectangle
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperRectangle.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperRectangle.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperRectangle.#ctor(System.Double,System.Double,ClassLibrary.PaperFigureClasses.Colors)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperRectangle.#ctor(System.Double,System.Double,ClassLibrary.PaperFigureClasses.Colors,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating paper rectangle from other figure
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+            <param name="color"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperRectangle.#ctor(System.Double,System.Double,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating white color (default color) paper rectangle from other figure
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperRectangle.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.PaperFigureClasses.PaperTriangle">
+            <summary>
+            Class for paper triangle, inherited from AbstractTriangle class and implements interface IPainted
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.PaperFigureClasses.PaperTriangle.FigureColor">
+            <summary>
+            Color of paper triangle
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperTriangle.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperTriangle.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+            <param name="thirdSide"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperTriangle.#ctor(System.Double,System.Double,System.Double,ClassLibrary.PaperFigureClasses.Colors)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+            <param name="thirdSide"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperTriangle.#ctor(System.Double,System.Double,System.Double,ClassLibrary.PaperFigureClasses.Colors,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating paper triangle from other figure
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+            <param name="thirdSide"></param>
+            <param name="color"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperTriangle.#ctor(System.Double,System.Double,System.Double,ClassLibrary.AbstractClasses.AbstractFigure)">
+            <summary>
+            Constructor with parameters for creating white color (default color) paper triangle from other figure
+            </summary>
+            <param name="firstSide"></param>
+            <param name="secondSide"></param>
+            <param name="thirdSide"></param>
+            <param name="figure"></param>
+        </member>
+        <member name="M:ClassLibrary.PaperFigureClasses.PaperTriangle.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

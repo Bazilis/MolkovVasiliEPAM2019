@@ -3,6 +3,9 @@ using ClassLibrary.AbstractClasses;
 
 namespace ClassLibrary.FilmFigureClasses
 {
+    /// <summary>
+    /// Class for film triangle, inherited from AbstractTriangle class
+    /// </summary>
     public class FilmTriangle : AbstractTriangle
     {
         public FilmTriangle()

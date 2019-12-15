@@ -2,13 +2,19 @@
 
 namespace ClassLibrary.PaperFigureClasses
 {
+    /// <summary>
+    /// Interface for painting figures
+    /// </summary>
     public interface IPainted
     {
+        /// <summary>
+        /// Color of figure
+        /// </summary>
         Colors FigureColor { get; set; }
     }
 
     /// <summary>
-    ///  16 Colors fields copied from https://docs.microsoft.com/en-us/dotnet/api/system.consolecolor
+    ///  Enum type with 16 Colors fields copied from https://docs.microsoft.com/en-us/dotnet/api/system.consolecolor
     /// </summary>
     public enum Colors
     {
@@ -27,6 +33,6 @@ namespace ClassLibrary.PaperFigureClasses
         Red,            // 12 	The color red
         Magenta,        // 13 	The color magenta (purplish-red)
         Yellow,         // 14 	The color yellow
-        White           // 15 	The color white
+        White           // 15 	The color white     (DEFAULT COLOR)
     }
 }

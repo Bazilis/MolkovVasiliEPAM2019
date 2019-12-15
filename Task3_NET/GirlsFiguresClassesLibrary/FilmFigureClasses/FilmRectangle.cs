@@ -3,6 +3,9 @@ using ClassLibrary.AbstractClasses;
 
 namespace ClassLibrary.FilmFigureClasses
 {
+    /// <summary>
+    /// Class for film rectangle, inherited from AbstractRectangle class
+    /// </summary>
     public class FilmRectangle : AbstractRectangle
     {
         public FilmRectangle()

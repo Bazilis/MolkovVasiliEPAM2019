@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTestProject</name>
+    </assembly>
+    <members>
+        <member name="T:UnitTestProject.AbstractCircleTest">
+            <summary>
+            Test class for AbstractCircle class
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.AbstractCircleTest.TestMethodForAbstractCircleConstructorWithoutParameters">
+            <summary>
+            Test method for AbstractCircle class constructor without parameters, catch CreationException
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.AbstractCircleTest.TestMethodForAbstractCircleConstructorWithParameter(System.Double)">
+            <summary>
+            Test method for AbstractCircle class constructor with parameters, catch CreationException
+            </summary>
+            <param name="circleRadius"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractCircleTest.TestMethodForAbstractCircleConstructorCreateFilmCircleFromOtherAbstractFigure(System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractCircle class constructor with parameters for creating circle from other figure, catch CreationException
+            </summary>
+            <param name="circleRadius"></param>
+            <param name="rectangleFirstSide"></param>
+            <param name="rectangleSecondSide"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractCircleTest.TestMethodForAbstractCircleGetPerimeterMethod(System.Double,System.Double)">
+            <summary>
+            Test method for AbstractCircle class GetPerimeter() method
+            </summary>
+            <param name="circleRadius"></param>
+            <param name="circlePerimetr"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractCircleTest.TestMethodForAbstractCircleGetAreaMethod(System.Double,System.Double)">
+            <summary>
+            Test method for AbstractCircle class GetArea() method
+            </summary>
+            <param name="circleRadius"></param>
+            <param name="circleArea"></param>
+        </member>
+        <member name="T:UnitTestProject.AbstractEquilateralTriangleTest">
+            <summary>
+            Test class for AbstractEquilateralTriangle class
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.AbstractEquilateralTriangleTest.TestMethodForAbstractEquilateralTriangleConstructorWithoutParameters">
+            <summary>
+            Test method for AbstractEquilateralTriangle class constructor without parameters, catch CreationException
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.AbstractEquilateralTriangleTest.TestMethodForAbstractEquilateralTriangleConstructorWithParameter(System.Double)">
+            <summary>
+            Test method for AbstractEquilateralTriangle class constructor with parameters, catch CreationException
+            </summary>
+            <param name="equilateralTriangleSide"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractEquilateralTriangleTest.TestMethodForAbstractEquilateralTriangleConstructorCreateFilmEquilateralTriangleFromOtherAbstractFigure(System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractEquilateralTriangle class constructor with parameters for creating equilateral triangle from other figure, catch CreationException
+            </summary>
+            <param name="equilateralTriangleSide"></param>
+            <param name="rectangleFirstSide"></param>
+            <param name="rectangleSecondSide"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractEquilateralTriangleTest.TestMethodForAbstractEquilateralTriangleGetPerimeterMethod(System.Double,System.Double)">
+            <summary>
+            Test method for AbstractEquilateralTriangle class GetPerimeter() method
+            </summary>
+            <param name="equilateralTriangleSide"></param>
+            <param name="equilateralTrianglePerimetr"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractEquilateralTriangleTest.TestMethodForAbstractEquilateralTriangleGetAreaMethod(System.Double,System.Double)">
+            <summary>
+            Test method for AbstractEquilateralTriangle class GetArea() method
+            </summary>
+            <param name="equilateralTriangleSide"></param>
+            <param name="equilateralTriangleArea"></param>
+        </member>
+        <member name="T:UnitTestProject.AbstractIsoscelesTriangleTest">
+            <summary>
+            Test class for AbstractIsoscelesTriangle class
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.AbstractIsoscelesTriangleTest.TestMethodForAbstractIsoscelesTriangleConstructorWithoutParameters">
+            <summary>
+            Test method for AbstractIsoscelesTriangle class constructor without parameters, catch CreationException
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.AbstractIsoscelesTriangleTest.TestMethodForAbstractIsoscelesTriangleConstructorWithParameter(System.Double,System.Double)">
+            <summary>
+            Test method for AbstractIsoscelesTriangle class constructor with parameters, catch CreationException
+            </summary>
+            <param name="isoscelesTriangleFirsAndSecondSides"></param>
+            <param name="isoscelesTriangleThirdSide"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractIsoscelesTriangleTest.TestMethodForAbstractIsoscelesTriangleConstructorCreateFilmIsoscelesTriangleFromOtherAbstractFigure(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractIsoscelesTriangle class constructor with parameters for creating isosceles triangle from other figure, catch CreationException
+            </summary>
+            <param name="isoscelesTriangleFirsAndSecondSides"></param>
+            <param name="isoscelesTriangleThirdSide"></param>
+            <param name="rectangleFirstSide"></param>
+            <param name="rectangleSecondSide"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractIsoscelesTriangleTest.TestMethodForAbstractIsoscelesTriangleGetPerimeterMethod(System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractIsoscelesTriangle class GetPerimeter() method
+            </summary>
+            <param name="isoscelesTriangleFirsAndSecondSides"></param>
+            <param name="isoscelesTriangleThirdSide"></param>
+            <param name="isoscelesTrianglePerimetr"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractIsoscelesTriangleTest.TestMethodForAbstractIsoscelesTriangleGetAreaMethod(System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractIsoscelesTriangle class GetArea() method
+            </summary>
+            <param name="isoscelesTriangleFirsAndSecondSides"></param>
+            <param name="isoscelesTriangleThirdSide"></param>
+            <param name="isoscelesTriangleArea"></param>
+        </member>
+        <member name="T:UnitTestProject.AbstractRectangleTest">
+            <summary>
+            Test class for AbstractRectangle class
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.AbstractRectangleTest.TestMethodForAbstractRectangleConstructorWithoutParameters">
+            <summary>
+            Test method for AbstractRectangle class constructor without parameters, catch CreationException
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.AbstractRectangleTest.TestMethodForAbstractRectangleConstructorWithParameter(System.Double,System.Double)">
+            <summary>
+            Test method for AbstractRectangle class constructor with parameters, catch CreationException
+            </summary>
+            <param name="rectangleFirstSide"></param>
+            <param name="rectangleSecondSide"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractRectangleTest.TestMethodForAbstractRectangleConstructorCreateFilmRectangleFromOtherAbstractFigure(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractRectangle class constructor with parameters for creating rectangle from other figure, catch CreationException
+            </summary>
+            <param name="rectangleFirstSide"></param>
+            <param name="rectangleSecondSide"></param>
+            <param name="triangleFirstSide"></param>
+            <param name="triangleSecondSide"></param>
+            <param name="triangleThirdSide"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractRectangleTest.TestMethodForAbstractRectangleGetPerimeterMethod(System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractRectangle class GetPerimeter() method
+            </summary>
+            <param name="rectangleFirstSide"></param>
+            <param name="rectangleSecondSide"></param>
+            <param name="rectanglePerimetr"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractRectangleTest.TestMethodForAbstractRectangleGetAreaMethod(System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractRectangle class GetArea() method
+            </summary>
+            <param name="rectangleFirstSide"></param>
+            <param name="rectangleSecondSide"></param>
+            <param name="rectangleArea"></param>
+        </member>
+        <member name="T:UnitTestProject.AbstractTriangleTest">
+            <summary>
+            Test class for AbstractTriangle class
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.AbstractTriangleTest.TestMethodForAbstractTriangleConstructorWithoutParameters">
+            <summary>
+            Test method for AbstractTriangle class constructor without parameters, catch CreationException
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.AbstractTriangleTest.TestMethodForAbstractTriangleConstructorWithParameter(System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractTriangle class constructor with parameters, catch CreationException
+            </summary>
+            <param name="triangleFirstSide"></param>
+            <param name="triangleSecondSide"></param>
+            <param name="triangleThirdSide"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractTriangleTest.TestMethodForAbstractTriangleConstructorCreateFilmTriangleFromOtherAbstractFigure(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractTriangle class constructor with parameters for creating triangle from other figure, catch CreationException
+            </summary>
+            <param name="triangleFirstSide"></param>
+            <param name="triangleSecondSide"></param>
+            <param name="triangleThirdSide"></param>
+            <param name="rectangleFirstSide"></param>
+            <param name="rectangleSecondSide"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractTriangleTest.TestMethodForAbstractTriangleGetPerimeterMethod(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractTriangle class GetPerimeter() method
+            </summary>
+            <param name="triangleFirstSide"></param>
+            <param name="triangleSecondSide"></param>
+            <param name="triangleThirdSide"></param>
+            <param name="perimetr"></param>
+        </member>
+        <member name="M:UnitTestProject.AbstractTriangleTest.TestMethodForAbstractTriangleGetAreaMethod(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Test method for AbstractTriangle class GetArea() method
+            </summary>
+            <param name="triangleFirstSide"></param>
+            <param name="triangleSecondSide"></param>
+            <param name="triangleThirdSide"></param>
+            <param name="triangleArea"></param>
+        </member>
+    </members>
+</doc>

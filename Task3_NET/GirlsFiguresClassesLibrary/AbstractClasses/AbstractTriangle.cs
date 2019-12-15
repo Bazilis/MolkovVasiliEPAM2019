@@ -3,6 +3,9 @@ using ClassLibrary.ExceptionClasses;
 
 namespace ClassLibrary.AbstractClasses
 {
+    /// <summary>
+    /// Base class for creating triangle, inherited from AbstractFigure class
+    /// </summary>
     public abstract class AbstractTriangle : AbstractFigure
     {
         private double firstSide;
@@ -11,6 +14,9 @@ namespace ClassLibrary.AbstractClasses
 
         private double thirdSide;
 
+        /// <summary>
+        /// First side of triangle
+        /// </summary>
         public double FirstSide
         {
             get
@@ -27,6 +33,9 @@ namespace ClassLibrary.AbstractClasses
             }
         }
 
+        /// <summary>
+        /// Second side of triangle
+        /// </summary>
         public double SecondSide
         {
             get
@@ -43,6 +52,9 @@ namespace ClassLibrary.AbstractClasses
             }
         }
 
+        /// <summary>
+        /// Third side of triangle
+        /// </summary>
         public double ThirdSide
         {
             get
@@ -59,11 +71,20 @@ namespace ClassLibrary.AbstractClasses
             }
         }
 
+        /// <summary>
+        /// Constructor without parameters
+        /// </summary>
         public AbstractTriangle()
         {
             throw new CreationException($"Sides of {this.ToString()} equals zero");
         }
 
+        /// <summary>
+        /// Constructor with parameters and checking triangle for existanse
+        /// </summary>
+        /// <param name="firstSide"></param>
+        /// <param name="secondSide"></param>
+        /// <param name="thirdSide"></param>
         public AbstractTriangle(double firstSide, double secondSide, double thirdSide)
         {
             if (firstSide + secondSide > thirdSide)
@@ -92,16 +113,31 @@ namespace ClassLibrary.AbstractClasses
             }
         }
 
+        /// <summary>
+        /// Constructor with parameters for creating triangle from other figure
+        /// </summary>
+        /// <param name="firstSide"></param>
+        /// <param name="secondSide"></param>
+        /// <param name="thirdSide"></param>
+        /// <param name="figure"></param>
         public AbstractTriangle(double firstSide, double secondSide, double thirdSide, AbstractFigure figure) : this(firstSide, secondSide, thirdSide)
         {
             CreationException.FiguresHandler(this, figure);
         }
 
+        /// <summary>
+        /// Override GetPerimeter() method for calculating triangle perimeter
+        /// </summary>
+        /// <returns></returns>
         public override double GetPerimeter()
         {
             return firstSide + secondSide + thirdSide;
         }
 
+        /// <summary>
+        /// Override GetArea() method for calculating triangle area
+        /// </summary>
+        /// <returns></returns>
         public override double GetArea()
         {
             double semiPerimeter = (this.GetPerimeter() / 2);   // half of perimeter
@@ -112,6 +148,10 @@ namespace ClassLibrary.AbstractClasses
                                        (semiPerimeter - thirdSide)), 4);
         }
 
+        /// <summary>
+        /// Override ToString() method
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"'{this.GetType().Name}', sides '{firstSide}', '{secondSide}' and '{thirdSide}'";

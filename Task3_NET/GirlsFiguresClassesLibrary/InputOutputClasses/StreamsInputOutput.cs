@@ -6,9 +6,17 @@ using ClassLibrary.ExceptionClasses;
 
 namespace ClassLibrary.InputOutputClasses
 {
+    /// <summary>
+    /// Static class for serialization/deserialization GirlsBoxWithFigures class instance to XML-file using StreamWriter/StreamReader classes
+    /// </summary>
     public static class StreamsInputOutput
     {
-        public static void WriteToXmlFileFromBox(BoxWithFigures box, string filePath)
+        /// <summary>
+        /// Static method for serialization GirlsBoxWithFigures class instance to XML-file using StreamWriter class
+        /// </summary>
+        /// <param name="box"></param>
+        /// <param name="filePath"></param>
+        public static void WriteToXmlFileFromBox(GirlsBoxWithFigures box, string filePath)
         {
             if (!filePath.EndsWith(".xml"))
                 throw new InputOutputException("Wrong output file path. File name must have an extension \".xml\"");
@@ -34,6 +42,11 @@ namespace ClassLibrary.InputOutputClasses
             }
         }
 
+        /// <summary>
+        /// Static method for deserialization list of abstract figures from XML-file using StreamReader class
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
         public static List<AbstractFigure> ReadFromXmlFileToList(string filePath)
         {
             if (!filePath.EndsWith(".xml"))
@@ -49,7 +62,7 @@ namespace ClassLibrary.InputOutputClasses
 
                     if (currentString.Contains("<NameWithParameters>"))
                     {
-                        figures.Add(StringsParser.FigureFromString(currentString));
+                        figures.Add(StringsParser.GetFigureFromString(currentString));
                     }
                 }
             }

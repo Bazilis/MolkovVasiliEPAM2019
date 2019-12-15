@@ -6,9 +6,17 @@ using ClassLibrary.ExceptionClasses;
 
 namespace ClassLibrary.InputOutputClasses
 {
+    /// <summary>
+    /// Static class for serialization/deserialization GirlsBoxWithFigures class instance to XML-file using XmlWriter/XmlReader classes
+    /// </summary>
     public static class XmlInputOutput
     {
-        public static void WriteToXmlFileFromBox(BoxWithFigures box, string xmlFilePath)
+        /// <summary>
+        /// Static method for serialization GirlsBoxWithFigures class instance to XML-file using XmlWriter class
+        /// </summary>
+        /// <param name="box"></param>
+        /// <param name="xmlFilePath"></param>
+        public static void WriteToXmlFileFromBox(GirlsBoxWithFigures box, string xmlFilePath)
         {
             if (!xmlFilePath.EndsWith(".xml"))
                 throw new InputOutputException("Wrong output file path. File name must have an extension \".xml\"");
@@ -52,6 +60,11 @@ namespace ClassLibrary.InputOutputClasses
             }
         }
 
+        /// <summary>
+        /// Static method for deserialization list of abstract figures from XML-file using XmlReader class
+        /// </summary>
+        /// <param name="xmlFilePath"></param>
+        /// <returns></returns>
         public static List<AbstractFigure> ReadFromXmlFileToList(string xmlFilePath)
         {
             if (!xmlFilePath.EndsWith(".xml"))
@@ -64,7 +77,7 @@ namespace ClassLibrary.InputOutputClasses
                 while (xmlReader.Read())
                 {
                     if (xmlReader.Name == "NameWithParameters")
-                        figures.Add(StringsParser.FigureFromString(xmlReader.ReadElementContentAsString()));
+                        figures.Add(StringsParser.GetFigureFromString(xmlReader.ReadElementContentAsString()));
                 }
 
                 xmlReader.Close();

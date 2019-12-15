@@ -6,9 +6,15 @@ using ClassLibrary.ExceptionClasses;
 
 namespace UnitTestProject
 {
+    /// <summary>
+    /// Test class for AbstractTriangle class
+    /// </summary>
     [TestClass]
     public class AbstractTriangleTest
     {
+        /// <summary>
+        /// Test method for AbstractTriangle class constructor without parameters, catch CreationException
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(CreationException))]
         public void TestMethodForAbstractTriangleConstructorWithoutParameters()
@@ -16,6 +22,12 @@ namespace UnitTestProject
             _ = new FilmTriangle();
         }
 
+        /// <summary>
+        /// Test method for AbstractTriangle class constructor with parameters, catch CreationException
+        /// </summary>
+        /// <param name="triangleFirstSide"></param>
+        /// <param name="triangleSecondSide"></param>
+        /// <param name="triangleThirdSide"></param>
         [DataTestMethod]
         [DataRow(0, 3, 2)]
         [DataRow(4, -2, 3)]
@@ -25,6 +37,14 @@ namespace UnitTestProject
             _ = new FilmTriangle(triangleFirstSide, triangleSecondSide, triangleThirdSide);
         }
 
+        /// <summary>
+        /// Test method for AbstractTriangle class constructor with parameters for creating triangle from other figure, catch CreationException
+        /// </summary>
+        /// <param name="triangleFirstSide"></param>
+        /// <param name="triangleSecondSide"></param>
+        /// <param name="triangleThirdSide"></param>
+        /// <param name="rectangleFirstSide"></param>
+        /// <param name="rectangleSecondSide"></param>
         [DataTestMethod]
         [DataRow(10, 14, 12, 3, 4)]
         [DataRow(15, 17, 16, 4, 5)]
@@ -37,6 +57,13 @@ namespace UnitTestProject
             _ = new FilmTriangle(triangleFirstSide, triangleSecondSide, triangleThirdSide, filmRectangle);
         }
 
+        /// <summary>
+        /// Test method for AbstractTriangle class GetPerimeter() method
+        /// </summary>
+        /// <param name="triangleFirstSide"></param>
+        /// <param name="triangleSecondSide"></param>
+        /// <param name="triangleThirdSide"></param>
+        /// <param name="perimetr"></param>
         [DataTestMethod]
         [DataRow(2.3, 4.5, 6.7, 13.5)]
         [DataRow(4.5, 8.7, 7.8, 21)]
@@ -54,6 +81,13 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);
         }
 
+        /// <summary>
+        /// Test method for AbstractTriangle class GetArea() method
+        /// </summary>
+        /// <param name="triangleFirstSide"></param>
+        /// <param name="triangleSecondSide"></param>
+        /// <param name="triangleThirdSide"></param>
+        /// <param name="triangleArea"></param>
         [DataTestMethod]
         [DataRow(2.3, 4.5, 6.7, 1.8383)]
         [DataRow(4.5, 8.7, 7.8, 17.498)]
