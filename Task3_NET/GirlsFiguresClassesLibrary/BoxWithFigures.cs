@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ClassLibrary.AbstractClasses;
 using ClassLibrary.ExceptionClasses;
 using ClassLibrary.PaperFigureClasses;
+using ClassLibrary.InputOutputClasses;
 
 namespace ClassLibrary
 {
@@ -139,6 +140,40 @@ namespace ClassLibrary
             }
 
             return abstractFigures;
+        }
+
+
+
+        public void WriteAllFiguresToXmlFileFromBoxByStream(string xmlFilePath)
+        {
+            StreamsOutput.WriteToXmlFileFromBox(this, xmlFilePath);
+        }
+
+        public void WriteAllPaperFiguresToXmlFileFromBoxByStream(string xmlFilePath)
+        {
+            StreamsOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllPaperFigures()), xmlFilePath);
+        }
+
+        public void WriteAllFilmFiguresToXmlFileFromBoxByStream(string xmlFilePath)
+        {
+            StreamsOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllFilmFigures()), xmlFilePath);
+        }
+
+
+
+        public void WriteAllFiguresToXmlFileFromBoxByXml(string xmlFilePath)
+        {
+            XmlOutput.WriteToXmlFileFromBox(this, xmlFilePath);
+        }
+
+        public void WriteAllPaperFiguresToXmlFileFromBoxByXml(string xmlFilePath)
+        {
+            XmlOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllPaperFigures()), xmlFilePath);
+        }
+
+        public void WriteAllFilmFiguresToXmlFileFromBoxByXml(string xmlFilePath)
+        {
+            XmlOutput.WriteToXmlFileFromBox(new BoxWithFigures(GetAllFilmFigures()), xmlFilePath);
         }
     }
 }

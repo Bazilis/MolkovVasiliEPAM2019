@@ -28,7 +28,7 @@ namespace ClassLibrary.ExceptionClasses
                 throw new CreationException($"Material of figure '{second.ToString()}' not suitable to create figure '{first.ToString()}'");
 
             if (second.GetArea() <= first.GetArea())
-                throw new CreationException($"Square of figure '{second.ToString()}' not enough to create figure '{first.ToString()}'");
+                throw new CreationException($"Area of figure '{second.ToString()}' not enough to create figure '{first.ToString()}'");
         }
     }
 }

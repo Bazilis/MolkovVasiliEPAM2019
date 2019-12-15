@@ -50,12 +50,15 @@
     <Compile Include="BoxWithFigures.cs" />
     <Compile Include="ExceptionClasses\BoxWithFiguresException.cs" />
     <Compile Include="ExceptionClasses\CreationException.cs" />
+    <Compile Include="ExceptionClasses\OutputException.cs" />
     <Compile Include="ExceptionClasses\PaintException.cs" />
     <Compile Include="FilmFigureClasses\FilmCircle.cs" />
     <Compile Include="FilmFigureClasses\FilmEquilateralTriangle.cs" />
     <Compile Include="FilmFigureClasses\FilmIsoscelesTriangle.cs" />
     <Compile Include="FilmFigureClasses\FilmRectangle.cs" />
     <Compile Include="FilmFigureClasses\FilmTriangle.cs" />
+    <Compile Include="InputOutputClasses\StreamsOutput.cs" />
+    <Compile Include="InputOutputClasses\XmlOutput.cs" />
     <Compile Include="PaperFigureClasses\IPainted.cs" />
     <Compile Include="PaperFigureClasses\PaperCircle.cs" />
     <Compile Include="PaperFigureClasses\PaperEquilateralTriangle.cs" />
