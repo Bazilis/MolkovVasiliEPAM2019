@@ -3,10 +3,19 @@ using System.Collections.Generic;
 
 namespace ClassLibrary
 {
+    /// <summary>
+    /// Class for handling events in Client class
+    /// </summary>
     public class ClientEventHandler
     {
+        /// <summary>
+        /// String for saving message from server
+        /// </summary>
         public string MessageFromServer { get; private set; }
 
+        /// <summary>
+        /// Translit dictionary
+        /// </summary>
         readonly Dictionary<char, string> dictionary = new Dictionary<char, string>
         {
             {'а', "a"},  {'б', "b"},  {'в', "v"},   {'г', "g"},  {'д', "d"},  {'е', "e"},
@@ -17,6 +26,10 @@ namespace ClassLibrary
             {'э', "e"},  {'ю', "yu"}, {'я', "ya"}
         };
 
+        /// <summary>
+        /// Constructor with anonim method which convert russian letters message to english letters
+        /// </summary>
+        /// <param name="client"></param>
         public ClientEventHandler(Client client)
         {
             client.OnMessageFromServer += delegate (string message)

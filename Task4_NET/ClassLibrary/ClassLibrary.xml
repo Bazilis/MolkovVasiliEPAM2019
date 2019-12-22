@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLibrary.Client">
+            <summary>
+            Client class
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.Client.MessageFromServer">
+            <summary>
+            Delegate for methods with signature void(string)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="E:ClassLibrary.Client.OnMessageFromServer">
+            <summary>
+            Event on message from server
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Client.ClientName">
+            <summary>
+            Client name property
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Client.Port">
+            <summary>
+            Client port property
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Client.HostName">
+            <summary>
+            Client host name property
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Client.ClientTCP">
+            <summary>
+            TcpClient class instance
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Client.Stream">
+            <summary>
+            NetworkStream class instance
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Client.#ctor(System.String)">
+            <summary>
+            Constructor with one parameter
+            </summary>
+            <param name="clientName"></param>
+        </member>
+        <member name="M:ClassLibrary.Client.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Constructor with three parameters
+            </summary>
+            <param name="clientName"></param>
+            <param name="port"></param>
+            <param name="hostName"></param>
+        </member>
+        <member name="M:ClassLibrary.Client.Connect">
+            <summary>
+            Connecting method
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Client.SendMessageToServer(System.String)">
+            <summary>
+            Method for sending message to server
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ClassLibrary.Client.ReceiveMessageFromServer(System.Net.Sockets.NetworkStream)">
+            <summary>
+            Method for receiving message from server
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:ClassLibrary.Client.Disconnect">
+            <summary>
+            Disconnecting method
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.ClientEventHandler">
+            <summary>
+            Class for handling events in Client class
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.ClientEventHandler.MessageFromServer">
+            <summary>
+            String for saving message from server
+            </summary>
+        </member>
+        <member name="F:ClassLibrary.ClientEventHandler.dictionary">
+            <summary>
+            Translit dictionary
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.ClientEventHandler.#ctor(ClassLibrary.Client)">
+            <summary>
+            Constructor with anonim method which convert russian letters message to english letters
+            </summary>
+            <param name="client"></param>
+        </member>
+        <member name="T:ClassLibrary.Server">
+            <summary>
+            Server class
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.Server.MessageFromClient">
+            <summary>
+            Delegate for methods with signature void(string)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="E:ClassLibrary.Server.OnMessageFromClient">
+            <summary>
+            Event on message from client
+            </summary>
+        </member>
+        <member name="F:ClassLibrary.Server.ServerTCP">
+            <summary>
+            Instance of TcpListener class
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Server.Port">
+            <summary>
+            Port of server
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Server.HostName">
+            <summary>
+            Host name of server
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Server.#ctor">
+            <summary>
+            Constructor without parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Server.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="port"></param>
+            <param name="hostName"></param>
+        </member>
+        <member name="M:ClassLibrary.Server.StartServer">
+            <summary>
+            Method to start server
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Server.ReceiveMessageFromClient(System.Net.Sockets.NetworkStream)">
+            <summary>
+            Method for receiving message from client
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:ClassLibrary.Server.SendMessageToClient(System.Net.Sockets.NetworkStream)">
+            <summary>
+            Method for sanding message to client
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:ClassLibrary.Server.StopServer">
+            <summary>
+            Method to stop server
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.ServerEventHandler">
+            <summary>
+            Class for handling events in Server class
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.ServerEventHandler.ClientsMessages">
+            <summary>
+            Dictionary for saving client-message pairs
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.ServerEventHandler.#ctor(ClassLibrary.Server)">
+            <summary>
+            Constructor with anonim method which split incoming messages on client-message pairs
+            and saving to ClientsMessages dictionary
+            </summary>
+            <param name="server"></param>
+        </member>
+    </members>
+</doc>

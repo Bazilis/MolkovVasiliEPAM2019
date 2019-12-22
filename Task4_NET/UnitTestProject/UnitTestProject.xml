@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTestProject</name>
+    </assembly>
+    <members>
+        <member name="T:UnitTestProject.ClientAndServerMethodsTests">
+            <summary>
+            Test class for Client and Server methods
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.ClientAndServerMethodsTests.SendMessageToServerTestMethod(System.String,System.String)">
+            <summary>
+            Test method for Client class SendMessageToServer() method
+            </summary>
+            <param name="clientName"></param>
+            <param name="messageFromClient"></param>
+        </member>
+    </members>
+</doc>
