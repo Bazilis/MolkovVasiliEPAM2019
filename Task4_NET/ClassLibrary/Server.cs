@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace ClassLibrary
@@ -14,11 +11,25 @@ namespace ClassLibrary
         public delegate void MessageFromClient(string message);
         public event MessageFromClient OnMessageFromClient;
 
-        private static readonly TcpListener ServerTCP;
+        private readonly TcpListener ServerTCP;
 
         public int Port { get; private set; }
 
         public string HostName { get; private set; }
+
+        public Server()
+        {
+            Port = 8888;
+            HostName = "127.0.0.1";
+            ServerTCP = new TcpListener(IPAddress.Parse(HostName), Port);
+        }
+
+        public Server(int port, string hostName)
+        {
+            Port = port;
+            HostName = hostName;
+            ServerTCP = new TcpListener(IPAddress.Parse(HostName), Port);
+        }
 
         public void StartServer()
         {
@@ -30,7 +41,7 @@ namespace ClassLibrary
 
                 NetworkStream stream = client.GetStream();
 
-                new Thread(delegate ()
+                Task task = new Task(() =>
                 {
                     try
                     {
@@ -45,7 +56,9 @@ namespace ClassLibrary
                         client.Close();
                         throw new Exception(exception.ToString());
                     }
-                }).Start();
+                });
+
+                task.Start();
             }
         }
 
@@ -67,6 +80,11 @@ namespace ClassLibrary
             byte[] sendBytes = Encoding.Unicode.GetBytes(sendString);
 
             stream.Write(sendBytes, 0, sendBytes.Length);
+        }
+
+        public void StopServer()
+        {
+            ServerTCP.Stop();
         }
     }
 }

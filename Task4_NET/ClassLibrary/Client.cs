@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
@@ -64,6 +61,13 @@ namespace ClassLibrary
             string receivedString = Encoding.Unicode.GetString(receivedBytes, 0, bytesCount);
 
             OnMessageFromServer?.Invoke(receivedString);
+        }
+
+        public void Disconnect()
+        {
+            Stream.Close();
+
+            ClientTCP.Close();
         }
     }
 }
