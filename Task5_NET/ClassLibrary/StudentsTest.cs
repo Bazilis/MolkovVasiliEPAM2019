@@ -2,7 +2,7 @@
 
 namespace ClassLibrary
 {
-    public class StudentsTest : IComparable<StudentsTest>
+    public class StudentsTest : IComparable
     {
         private string nameOfStudent;
 
@@ -16,9 +16,9 @@ namespace ClassLibrary
             {
                 return nameOfStudent;
             }
-            set
+            private set
             {
-                if (nameOfStudent.Length < 1)
+                if (value.Length < 1)
                     throw new ArgumentException("Name of student is empty");
 
                 else
@@ -32,9 +32,9 @@ namespace ClassLibrary
             {
                 return gradeOfStudent;
             }
-            set
+            private set
             {
-                if (gradeOfStudent < 1 || gradeOfStudent > 10)
+                if (value < 1 || value > 10)
                     throw new ArgumentException("Grade of student is out of range. It should be from 1 to 10 points");
 
                 else
@@ -48,9 +48,9 @@ namespace ClassLibrary
             {
                 return topicOfTest;
             }
-            set
+            private set
             {
-                if (topicOfTest.Length < 1)
+                if (value.Length < 1)
                     throw new ArgumentException("Topic of test is empty");
 
                 else
@@ -60,20 +60,24 @@ namespace ClassLibrary
 
         public DateTime DateOfTest { get; private set; }
 
-        public StudentsTest(string nameOfStudent, int markOfStudent, string topicOfTest, DateTime dateOfTest)
+        public StudentsTest(string nameOfStudent, int gradeOfStudent, string topicOfTest, DateTime dateOfTest)
         {
             NameOfStudent = nameOfStudent;
-            GradeOfStudent = markOfStudent;
+            GradeOfStudent = gradeOfStudent;
             TopicOfTest = topicOfTest;
             DateOfTest = dateOfTest;
         }
 
-        public int CompareTo(StudentsTest student)
+        public int CompareTo(object obj)
         {
-            if (student != null)
+            if (obj is StudentsTest student)
+            {
                 return GradeOfStudent.CompareTo(student.GradeOfStudent);
+            }
             else
+            {
                 throw new ArgumentException("Impossible to compare");
+            }
         }
 
         public override string ToString()
