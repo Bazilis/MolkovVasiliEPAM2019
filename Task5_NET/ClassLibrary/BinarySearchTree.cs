@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ClassLibrary
 {
@@ -124,9 +125,7 @@ namespace ClassLibrary
                 }
                 CountNodes--;
             }
-            //если оба дочерних присутствуют, 
-            //то правый становится на место удаляемого,
-            //а левый вставляется в правый
+
             else
             {
                 if (node.ParentNode == null)
@@ -135,17 +134,13 @@ namespace ClassLibrary
                     RootNode = node.RightNode;
                     AddNode(node.LeftNode, RootNode);
                 }
-                /// <summary> if this node is in the left branch of the parent node. </summary>
                 else if (node == node.ParentNode.LeftNode)
-                //if (nodeSide == Side.Left)
                 {
-                    /// <summary>  </summary>
                     node.ParentNode.LeftNode = node.RightNode;
                     node.RightNode.ParentNode = node.ParentNode;
                     AddNode(node.LeftNode, node.RightNode);
                 }
-                else// if (node == node.ParentNode.RightNode)
-                //else if (nodeSide == Side.Right)
+                else
                 {
                     node.ParentNode.RightNode = node.RightNode;
                     node.RightNode.ParentNode = node.ParentNode;
@@ -168,10 +163,6 @@ namespace ClassLibrary
 
             else if (compareResult < 0)
             {
-                /// <summary> 
-                /// If the left child of the start node is empty, we stop the search. Return null.
-                /// Otherwise, the function is called recursively to advance in the branch.
-                /// </summary>
                 if (startNode.LeftNode == null)
                 {
                     return null;
@@ -192,6 +183,57 @@ namespace ClassLibrary
                 {
                     return FindNode(nodeData, startNode.RightNode);
                 }
+            }
+        }
+
+        public void BuildBalancedTree()
+        {
+            List<Node<T>> listOfNodes = new List<Node<T>>();
+
+            FillListOfNodesInAscendingOrder(RootNode, listOfNodes);
+
+            RemoveChildNodes(listOfNodes);
+
+            RootNode = null;
+
+            int count = CountNodes;
+            CountNodes = 0;
+
+            BuildBalancedTree(0, count - 1, listOfNodes);
+        }
+
+        public void FillListOfNodesInAscendingOrder(Node<T> node, List<Node<T>> listOfNodes)
+        {
+            if (node != null)
+            {
+                FillListOfNodesInAscendingOrder(node.LeftNode, listOfNodes);
+
+                listOfNodes.Add(node);
+
+                FillListOfNodesInAscendingOrder(node.RightNode, listOfNodes);
+            }
+        }
+
+        private void RemoveChildNodes(List<Node<T>> listOfNodes)
+        {
+            foreach (Node<T> node in listOfNodes)
+            {
+                node.LeftNode = null;
+                node.RightNode = null;
+            }
+        }
+
+        private void BuildBalancedTree(int firstNodeIndex, int lastNodeIndex, List<Node<T>> listOfNodes)
+        {
+            if (firstNodeIndex <= lastNodeIndex)
+            {
+                int middleNodeIndex = (int)Math.Round((double)(firstNodeIndex + lastNodeIndex) / 2);
+
+                AddNode(listOfNodes[middleNodeIndex]);
+
+                BuildBalancedTree(firstNodeIndex, middleNodeIndex - 1, listOfNodes);
+
+                BuildBalancedTree(middleNodeIndex + 1, lastNodeIndex, listOfNodes);
             }
         }
     }
