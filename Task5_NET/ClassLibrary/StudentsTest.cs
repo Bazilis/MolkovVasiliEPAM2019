@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ClassLibrary
 {
+    [DataContract(IsReference = true)]
     public class StudentsTest : IComparable
     {
         private string nameOfStudent;
@@ -10,6 +12,7 @@ namespace ClassLibrary
 
         private string topicOfTest;
 
+        [DataMember]
         public string NameOfStudent
         {
             get
@@ -26,6 +29,7 @@ namespace ClassLibrary
             }
         }
 
+        [DataMember]
         public int GradeOfStudent
         {
             get
@@ -42,6 +46,7 @@ namespace ClassLibrary
             }
         }
 
+        [DataMember]
         public string TopicOfTest
         {
             get
@@ -58,6 +63,7 @@ namespace ClassLibrary
             }
         }
 
+        [DataMember]
         public DateTime DateOfTest { get; private set; }
 
         public StudentsTest(string nameOfStudent, int gradeOfStudent, string topicOfTest, DateTime dateOfTest)
@@ -78,6 +84,34 @@ namespace ClassLibrary
             {
                 throw new ArgumentException("Impossible to compare");
             }
+        }
+
+        public static bool operator ==(StudentsTest first, StudentsTest second)
+        {
+            return first.NameOfStudent == second.NameOfStudent && first.GradeOfStudent == second.GradeOfStudent &&
+                   first.TopicOfTest == second.TopicOfTest && first.DateOfTest == second.DateOfTest;
+        }
+
+        public static bool operator !=(StudentsTest first, StudentsTest second)
+        {
+            return first.NameOfStudent != second.NameOfStudent || first.GradeOfStudent != second.GradeOfStudent ||
+                   first.TopicOfTest != second.TopicOfTest || first.DateOfTest != second.DateOfTest;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is StudentsTest student)
+                return (this.NameOfStudent == student.NameOfStudent &&
+                        this.GradeOfStudent == student.GradeOfStudent &&
+                        this.TopicOfTest == student.TopicOfTest &&
+                        this.DateOfTest == student.DateOfTest);
+            else
+                return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return (NameOfStudent.Length + GradeOfStudent + TopicOfTest.Length).GetHashCode();
         }
 
         public override string ToString()

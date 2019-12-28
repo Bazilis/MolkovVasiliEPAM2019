@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace ClassLibrary
 {
+    [DataContract(IsReference = true)]
     public class BinarySearchTree<T> where T : IComparable
     {
+        [DataMember]
         public Node<T> RootNode { get; private set; }
 
+        [DataMember]
         public int CountNodes { get; private set; }
 
         public Node<T> AddNode(T nodeData)
