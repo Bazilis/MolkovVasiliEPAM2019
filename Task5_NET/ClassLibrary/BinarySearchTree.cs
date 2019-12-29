@@ -4,20 +4,41 @@ using System.Runtime.Serialization;
 
 namespace ClassLibrary
 {
+    /// <summary>
+    /// Сlass describing a Binary Search Tree (BST)
+    /// </summary>
+    /// <typeparam name="T">Type supporting comparisons</typeparam>
     [DataContract(IsReference = true)]
     public class BinarySearchTree<T> where T : IComparable
     {
+        /// <summary>
+        /// Root node property
+        /// </summary>
         [DataMember]
         public Node<T> RootNode { get; private set; }
 
+        /// <summary>
+        /// Count of nodes property
+        /// </summary>
         [DataMember]
         public int CountNodes { get; private set; }
 
+        /// <summary>
+        /// Method for adding a node using T-type data
+        /// </summary>
+        /// <param name="nodeData"></param>
+        /// <returns></returns>
         public Node<T> AddNode(T nodeData)
         {
             return AddNode(new Node<T>(nodeData));
         }
 
+        /// <summary>
+        /// Recursive method for adding a node with its parent node
+        /// </summary>
+        /// <param name="node"></param>
+        /// <param name="parentNode"></param>
+        /// <returns></returns>
         private Node<T> AddNode(Node<T> node, Node<T> parentNode = null)
         {
             if (RootNode == null)
@@ -62,12 +83,20 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Method for removing node using T-type data
+        /// </summary>
+        /// <param name="nodeData"></param>
         public void RemoveNode(T nodeData)
         {
             Node<T> foundNode = FindNode(nodeData);
             RemoveNode(foundNode);
         }
 
+        /// <summary>
+        /// Method for removing node
+        /// </summary>
+        /// <param name="node"></param>
         private void RemoveNode(Node<T> node)
         {
             if (node == null)
@@ -154,6 +183,12 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Recursive method for finding node by its data
+        /// </summary>
+        /// <param name="nodeData"></param>
+        /// <param name="startNode"></param>
+        /// <returns></returns>
         public Node<T> FindNode(T nodeData, Node<T> startNode = null)
         {
             if (startNode == null)
@@ -190,6 +225,9 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Method for building balanced binary search tree
+        /// </summary>
         public void BuildBalancedTree()
         {
             List<Node<T>> listOfNodes = new List<Node<T>>();
@@ -206,6 +244,11 @@ namespace ClassLibrary
             BuildBalancedTree(0, count - 1, listOfNodes);
         }
 
+        /// <summary>
+        /// Recursive method for filling list of nodes in ascending order
+        /// </summary>
+        /// <param name="node"></param>
+        /// <param name="listOfNodes"></param>
         public void FillListOfNodesInAscendingOrder(Node<T> node, List<Node<T>> listOfNodes)
         {
             if (node != null)
@@ -218,6 +261,10 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Method for removing links to nodes from other nodes
+        /// </summary>
+        /// <param name="listOfNodes"></param>
         private void RemoveChildNodes(List<Node<T>> listOfNodes)
         {
             foreach (Node<T> node in listOfNodes)
@@ -227,6 +274,12 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Recursive method for building balanced binary search tree from list of nodes
+        /// </summary>
+        /// <param name="firstNodeIndex"></param>
+        /// <param name="lastNodeIndex"></param>
+        /// <param name="listOfNodes"></param>
         private void BuildBalancedTree(int firstNodeIndex, int lastNodeIndex, List<Node<T>> listOfNodes)
         {
             if (firstNodeIndex <= lastNodeIndex)

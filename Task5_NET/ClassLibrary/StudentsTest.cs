@@ -3,6 +3,9 @@ using System.Runtime.Serialization;
 
 namespace ClassLibrary
 {
+    /// <summary>
+    /// Class containing information about student's test
+    /// </summary>
     [DataContract(IsReference = true)]
     public class StudentsTest : IComparable
     {
@@ -12,6 +15,9 @@ namespace ClassLibrary
 
         private string topicOfTest;
 
+        /// <summary>
+        /// Name of student property
+        /// </summary>
         [DataMember]
         public string NameOfStudent
         {
@@ -29,6 +35,9 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Grade of student property
+        /// </summary>
         [DataMember]
         public int GradeOfStudent
         {
@@ -46,6 +55,9 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Topic of test property
+        /// </summary>
         [DataMember]
         public string TopicOfTest
         {
@@ -63,9 +75,19 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Date of test property
+        /// </summary>
         [DataMember]
         public DateTime DateOfTest { get; private set; }
 
+        /// <summary>
+        /// Constructor with parameters
+        /// </summary>
+        /// <param name="nameOfStudent"></param>
+        /// <param name="gradeOfStudent"></param>
+        /// <param name="topicOfTest"></param>
+        /// <param name="dateOfTest"></param>
         public StudentsTest(string nameOfStudent, int gradeOfStudent, string topicOfTest, DateTime dateOfTest)
         {
             NameOfStudent = nameOfStudent;
@@ -74,6 +96,11 @@ namespace ClassLibrary
             DateOfTest = dateOfTest;
         }
 
+        /// <summary>
+        /// Implementation of method for comparing objects
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int CompareTo(object obj)
         {
             if (obj is StudentsTest student)
@@ -86,18 +113,35 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// Overload comparison operator '=='
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
+        /// <returns></returns>
         public static bool operator ==(StudentsTest first, StudentsTest second)
         {
             return first.NameOfStudent == second.NameOfStudent && first.GradeOfStudent == second.GradeOfStudent &&
                    first.TopicOfTest == second.TopicOfTest && first.DateOfTest == second.DateOfTest;
         }
 
+        /// <summary>
+        /// Overload comparison operator '!='
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
+        /// <returns></returns>
         public static bool operator !=(StudentsTest first, StudentsTest second)
         {
             return first.NameOfStudent != second.NameOfStudent || first.GradeOfStudent != second.GradeOfStudent ||
                    first.TopicOfTest != second.TopicOfTest || first.DateOfTest != second.DateOfTest;
         }
 
+        /// <summary>
+        /// Override Equals() method
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             if (obj is StudentsTest student)
@@ -109,11 +153,19 @@ namespace ClassLibrary
                 return false;
         }
 
+        /// <summary>
+        /// Override GetHashCode() method
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             return (NameOfStudent.Length + GradeOfStudent + TopicOfTest.Length).GetHashCode();
         }
 
+        /// <summary>
+        /// Override ToString() method
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Name of student-> {NameOfStudent}; grade of student-> {GradeOfStudent}; topic of test-> {TopicOfTest}; date of test-> {DateOfTest}";

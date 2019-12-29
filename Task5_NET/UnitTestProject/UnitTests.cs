@@ -8,9 +8,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject
 {
+    /// <summary>
+    /// Test class
+    /// </summary>
     [TestClass]
     public class UnitTests
     {
+        /// <summary>
+        /// Test method for AddNode method and CountNodes property
+        /// </summary>
         [TestMethod]
         public void AddNodeAndCountNodesTestMethod()
         {
@@ -25,8 +31,11 @@ namespace UnitTestProject
             Assert.IsTrue(binarySearchTree.CountNodes == 5);
         }
 
+        /// <summary>
+        /// Test method for FindNode and RemoveNode methods and CountNodes property
+        /// </summary>
         [TestMethod]
-        public void FindNodeByNodeDataRemoveNodeAndCountNodesTestMethod()
+        public void FindNodeByNodeData_RemoveNode_And_CountNodesTestMethod()
         {
             StudentsTest student1 = new StudentsTest("Student1", 6, ".NET", DateTime.Now);
             StudentsTest student2 = new StudentsTest("Student2", 5, ".NET", DateTime.Now);
@@ -48,6 +57,9 @@ namespace UnitTestProject
             Assert.IsTrue(binarySearchTree.CountNodes == 4);
         }
 
+        /// <summary>
+        /// Test method for FillListOfNodesInAscendingOrder method
+        /// </summary>
         [TestMethod]
         public void FillListOfNodesInAscendingOrderTestMethod()
         {
@@ -81,6 +93,9 @@ namespace UnitTestProject
                           listOfNodes[4].NodeData == resultListOfNodes[4].NodeData);
         }
 
+        /// <summary>
+        /// Test method for BuildBalancedTree methods
+        /// </summary>
         [TestMethod]
         public void BuildBalancedTreeWithStudentTypeTestMethod()
         {
@@ -123,8 +138,11 @@ namespace UnitTestProject
                           Node5.NodeData == student5);
         }
 
+        /// <summary>
+        /// Test method for serialization/deserialization to/from XML-file
+        /// </summary>
         [TestMethod]
-        public void SerializeTo_DeserializeForm_XmlFile()
+        public void SerializeTo_DeserializeForm_XmlFileTestMethod()
         {
             StudentsTest student1 = new StudentsTest("Student1", 6, ".NET", DateTime.Now);
             StudentsTest student2 = new StudentsTest("Student2", 5, ".NET", DateTime.Now);
@@ -150,6 +168,7 @@ namespace UnitTestProject
             toXmlFile.WriteObject(xmlWriter, binarySearchTree);
             xmlWriter.Close();
 
+            //===========================================================================================================
 
             FileStream fileStream = new FileStream("binarySearchTree.xml", FileMode.Open);
             DataContractSerializer fromXmlFile = new DataContractSerializer(typeof(BinarySearchTree<StudentsTest>));

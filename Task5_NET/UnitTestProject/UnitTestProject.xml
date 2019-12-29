@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTestProject</name>
+    </assembly>
+    <members>
+        <member name="T:UnitTestProject.UnitTests">
+            <summary>
+            Test class
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTests.AddNodeAndCountNodesTestMethod">
+            <summary>
+            Test method for AddNode method and CountNodes property
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTests.FindNodeByNodeData_RemoveNode_And_CountNodesTestMethod">
+            <summary>
+            Test method for FindNode and RemoveNode methods and CountNodes property
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTests.FillListOfNodesInAscendingOrderTestMethod">
+            <summary>
+            Test method for FillListOfNodesInAscendingOrder method
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTests.BuildBalancedTreeWithStudentTypeTestMethod">
+            <summary>
+            Test method for BuildBalancedTree methods
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.UnitTests.SerializeTo_DeserializeForm_XmlFileTestMethod">
+            <summary>
+            Test method for serialization/deserialization to/from XML-file
+            </summary>
+        </member>
+    </members>
+</doc>

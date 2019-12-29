@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLibrary.BinarySearchTree`1">
+            <summary>
+            Сlass describing a Binary Search Tree (BST)
+            </summary>
+            <typeparam name="T">Type supporting comparisons</typeparam>
+        </member>
+        <member name="P:ClassLibrary.BinarySearchTree`1.RootNode">
+            <summary>
+            Root node property
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.BinarySearchTree`1.CountNodes">
+            <summary>
+            Count of nodes property
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.BinarySearchTree`1.AddNode(`0)">
+            <summary>
+            Method for adding a node using T-type data
+            </summary>
+            <param name="nodeData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.BinarySearchTree`1.AddNode(ClassLibrary.Node{`0},ClassLibrary.Node{`0})">
+            <summary>
+            Method for adding a node with its parent node
+            </summary>
+            <param name="node"></param>
+            <param name="parentNode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.BinarySearchTree`1.RemoveNode(`0)">
+            <summary>
+            Method for removing node using T-type data
+            </summary>
+            <param name="nodeData"></param>
+        </member>
+        <member name="M:ClassLibrary.BinarySearchTree`1.RemoveNode(ClassLibrary.Node{`0})">
+            <summary>
+            Method for removing node
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:ClassLibrary.BinarySearchTree`1.FindNode(`0,ClassLibrary.Node{`0})">
+            <summary>
+            Method for finding node by its data
+            </summary>
+            <param name="nodeData"></param>
+            <param name="startNode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.BinarySearchTree`1.BuildBalancedTree">
+            <summary>
+            Method for building balanced binary search tree
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.BinarySearchTree`1.FillListOfNodesInAscendingOrder(ClassLibrary.Node{`0},System.Collections.Generic.List{ClassLibrary.Node{`0}})">
+            <summary>
+            Method for filling list of nodes in ascending order
+            </summary>
+            <param name="node"></param>
+            <param name="listOfNodes"></param>
+        </member>
+        <member name="M:ClassLibrary.BinarySearchTree`1.RemoveChildNodes(System.Collections.Generic.List{ClassLibrary.Node{`0}})">
+            <summary>
+            Method for removing links to nodes from other nodes
+            </summary>
+            <param name="listOfNodes"></param>
+        </member>
+        <member name="M:ClassLibrary.BinarySearchTree`1.BuildBalancedTree(System.Int32,System.Int32,System.Collections.Generic.List{ClassLibrary.Node{`0}})">
+            <summary>
+            Method for building balanced binary search tree from list of nodes
+            </summary>
+            <param name="firstNodeIndex"></param>
+            <param name="lastNodeIndex"></param>
+            <param name="listOfNodes"></param>
+        </member>
+        <member name="T:ClassLibrary.Node`1">
+            <summary>
+            Сlass describing a Binary Searching Tree (BST) node
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ClassLibrary.Node`1.ParentNode">
+            <summary>
+            Parent node property
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Node`1.LeftNode">
+            <summary>
+            Left node property
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Node`1.RightNode">
+            <summary>
+            Right node property
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Node`1.NodeData">
+            <summary>
+            Data of node property
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Node`1.#ctor(`0)">
+            <summary>
+            Constructor with parameter
+            </summary>
+            <param name="nodeData"></param>
+        </member>
+        <member name="M:ClassLibrary.Node`1.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.StudentsTest">
+            <summary>
+            Class containing information about student's test
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.StudentsTest.NameOfStudent">
+            <summary>
+            Name of student property
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.StudentsTest.GradeOfStudent">
+            <summary>
+            Grade of student property
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.StudentsTest.TopicOfTest">
+            <summary>
+            Topic of test property
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.StudentsTest.DateOfTest">
+            <summary>
+            Date of test property
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.StudentsTest.#ctor(System.String,System.Int32,System.String,System.DateTime)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="nameOfStudent"></param>
+            <param name="gradeOfStudent"></param>
+            <param name="topicOfTest"></param>
+            <param name="dateOfTest"></param>
+        </member>
+        <member name="M:ClassLibrary.StudentsTest.CompareTo(System.Object)">
+            <summary>
+            Implementation of method for comparing objects
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.StudentsTest.op_Equality(ClassLibrary.StudentsTest,ClassLibrary.StudentsTest)">
+            <summary>
+            Overload comparison operator '=='
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.StudentsTest.op_Inequality(ClassLibrary.StudentsTest,ClassLibrary.StudentsTest)">
+            <summary>
+            Overload comparison operator '!='
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.StudentsTest.Equals(System.Object)">
+            <summary>
+            Override Equals() method
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.StudentsTest.GetHashCode">
+            <summary>
+            Override GetHashCode() method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.StudentsTest.ToString">
+            <summary>
+            Override ToString() method
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
