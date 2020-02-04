@@ -41,8 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccessObjectsFactory\AbstractCreator.cs" />
+    <Compile Include="DataAccessObjectsFactory\DAOCreator.cs" />
+    <Compile Include="DataAccessObjectsFactory\ExamDAO.cs" />
     <Compile Include="DataAccessObjectsFactory\GenericCRUD.cs" />
+    <Compile Include="DataAccessObjectsFactory\GroupDAO.cs" />
     <Compile Include="DataAccessObjectsFactory\ICRUD.cs" />
+    <Compile Include="DataAccessObjectsFactory\ResultDAO.cs" />
+    <Compile Include="DataAccessObjectsFactory\StudentDAO.cs" />
+    <Compile Include="DataAccessObjectsFactory\SubjectDAO.cs" />
     <Compile Include="DatabaseDataModels\Exam.cs" />
     <Compile Include="DatabaseDataModels\Group.cs" />
     <Compile Include="DatabaseDataModels\Result.cs" />
