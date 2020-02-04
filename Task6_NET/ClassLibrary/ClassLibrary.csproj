@@ -41,12 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccessObjectsFactory\GenericCRUD.cs" />
+    <Compile Include="DataAccessObjectsFactory\ICRUD.cs" />
     <Compile Include="DatabaseDataModels\Exam.cs" />
     <Compile Include="DatabaseDataModels\Group.cs" />
     <Compile Include="DatabaseDataModels\Result.cs" />
     <Compile Include="DatabaseDataModels\Student.cs" />
     <Compile Include="DatabaseDataModels\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Database\Database.sqlproj">
+      <Project>{f21cc0c1-a196-4931-95f9-14596eca9b00}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Group]
+(
+	[Id] INT IDENTITY (1,1) PRIMARY KEY, 
+    [GroupName] NVARCHAR(20) NOT NULL
+)
