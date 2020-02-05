@@ -56,6 +56,10 @@
     <Compile Include="DatabaseDataModels\Student.cs" />
     <Compile Include="DatabaseDataModels\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportsDataModels\StudentSessionResult.cs" />
+    <Compile Include="Reports\ExcludedStudentsList.cs" />
+    <Compile Include="Reports\ForEachGroupSessionsResults.cs" />
+    <Compile Include="Reports\IReport.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Database\Database.sqlproj">
