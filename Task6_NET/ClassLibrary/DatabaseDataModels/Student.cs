@@ -35,6 +35,40 @@ namespace ClassLibrary.DatabaseDataModels
             GroupId = groupId;
         }
 
+        public static bool operator ==(Student first, Student second)
+        {
+            return first.Id == second.Id && first.Surname == second.Surname &&
+                   first.Name == second.Name && first.Patronymic == second.Patronymic &&
+                   first.Gender == second.Gender && first.DateOfBirth == second.DateOfBirth &&
+                   first.GroupId == second.GroupId;
+        }
+
+        public static bool operator !=(Student first, Student second)
+        {
+            return first.Id != second.Id || first.Surname != second.Surname ||
+                   first.Name != second.Name || first.Patronymic != second.Patronymic ||
+                   first.Gender != second.Gender || first.DateOfBirth != second.DateOfBirth ||
+                   first.GroupId != second.GroupId;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Student s)
+                return (this.Id == s.Id && this.Surname == s.Surname &&
+                        this.Name == s.Name && this.Patronymic == s.Patronymic &&
+                        this.Gender == s.Gender && this.DateOfBirth == s.DateOfBirth &&
+                        this.GroupId == s.GroupId);
+            else
+                return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return (Id + Surname.Length + Name.Length + Patronymic.Length +
+                    Gender.Length + DateOfBirth.ToString().Length +
+                    GroupId).GetHashCode();
+        }
+
         public override string ToString()
         {
             return $"Id: {Id}, Surname: {Surname}, Name: {Name}, Patronymic: {Patronymic}, Gender: {Gender}, Date of birth: {DateOfBirth}, Group Id: {GroupId}";

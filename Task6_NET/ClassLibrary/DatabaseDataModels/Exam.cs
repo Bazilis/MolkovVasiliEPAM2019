@@ -10,26 +10,26 @@ namespace ClassLibrary.DatabaseDataModels
         public int GroupId { get; set; }
         public int SubjectId { get; set; }
 
-        public Exam(int id, int subjectId, DateTime examDate, int sessionNumber, int groupId)
+        public Exam(int id, int sessionNumber, DateTime examDate, int groupId, int subjectId)
         {
             Id = id;
-            SubjectId = subjectId;
-            ExamDate = examDate;
             SessionNumber = sessionNumber;
+            ExamDate = examDate;
             GroupId = groupId;
+            SubjectId = subjectId;
         }
 
-        public Exam(int subjectId, DateTime examDate, int sessionNumber, int groupId)
+        public Exam(int sessionNumber, DateTime examDate, int groupId, int subjectId)
         {
-            SubjectId = subjectId;
-            ExamDate = examDate;
             SessionNumber = sessionNumber;
+            ExamDate = examDate;
             GroupId = groupId;
+            SubjectId = subjectId;
         }
 
         public override string ToString()
         {
-            return $"Id: {Id}, Subject Id: {SubjectId}, Exam date: {ExamDate}, Session number: {SessionNumber}, Group Id: {GroupId}";
+            return $"Id: {Id}, Session number: {SessionNumber}, Exam date: {ExamDate}, Group Id: {GroupId}, Subject Id: {SubjectId}";
         }
     }
 }

@@ -107,23 +107,25 @@ namespace ClassLibrary.Reports
                     StudentsGrade = result.StudentsGrade
                 };
 
-            if (groupSessionResult == null)
+            if (groupSessionResult == null || !groupSessionResult.GetEnumerator().MoveNext())
             {
                 throw new Exception("Group session results is not found");
             }
-
-            IEnumerable<StudentSessionResult> orderedGroupSessionResult;
-
-            if (orderByDescending == false)
-            {
-                orderedGroupSessionResult = groupSessionResult.OrderBy(orderBy);
-            }
             else
             {
-                orderedGroupSessionResult = groupSessionResult.OrderByDescending(orderBy);
-            }
+                IEnumerable<StudentSessionResult> orderedGroupSessionResult;
 
-            return orderedGroupSessionResult;
+                if (orderByDescending == false)
+                {
+                    orderedGroupSessionResult = groupSessionResult.OrderBy(orderBy);
+                }
+                else
+                {
+                    orderedGroupSessionResult = groupSessionResult.OrderByDescending(orderBy);
+                }
+
+                return orderedGroupSessionResult;
+            }
         }
     }
 }

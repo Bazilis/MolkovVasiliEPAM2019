@@ -23,7 +23,7 @@ namespace ClassLibrary.Reports
             subjectDAO = creatorDAO.GetSubjectDAO();
         }
 
-        public List<IGrouping<int, Student>> GetExcludedStudentsList(double unsatisfactoryAssessment, int acceptableNumberOfUnsatisfactoryAssessment)
+        public List<IGrouping<int, Student>> GetExcludedStudentsList(double minimalStudentsGrade, int maximalNumberOfMinimalStudentsGrades)
         {
             List<Exam> exams = examDAO.ReadAll();
             List<Group> groups = groupDAO.ReadAll();
@@ -34,25 +34,27 @@ namespace ClassLibrary.Reports
             IEnumerable<Student> lowGradeStudents =
                 from student in students
                 join result in results on student.Id equals result.StudentId
-                where result.StudentsGrade < unsatisfactoryAssessment
+                where result.StudentsGrade < minimalStudentsGrade
                 select student;
 
-            if (!(lowGradeStudents != null && lowGradeStudents.GetEnumerator().MoveNext()))
+            if (lowGradeStudents == null || !lowGradeStudents.GetEnumerator().MoveNext())
             {
                 throw new Exception("Students with low grade is not found");
             }
-
-            List<Student> excludedStudens = new List<Student>();
-
-            foreach (Student student in lowGradeStudents.ToList())
+            else
             {
-                if (lowGradeStudents.ToList().FindAll(s => s.Id == student.Id).Count > acceptableNumberOfUnsatisfactoryAssessment)
-                {
-                    excludedStudens.Add(student);
-                }
-            }
+                List<Student> excludedStudens = new List<Student>();
 
-            return excludedStudens.Distinct().GroupBy(g => g.GroupId).ToList();
+                foreach (Student student in lowGradeStudents.ToList())
+                {
+                    if (lowGradeStudents.ToList().FindAll(s => s.Id == student.Id).Count > maximalNumberOfMinimalStudentsGrades)
+                    {
+                        excludedStudens.Add(student);
+                    }
+                }
+
+                return excludedStudens.Distinct().GroupBy(g => g.GroupId).ToList();
+            }
         }
     }
 }
