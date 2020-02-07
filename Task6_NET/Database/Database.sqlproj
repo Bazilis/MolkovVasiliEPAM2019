@@ -64,4 +64,7 @@
     <Build Include="Student.sql" />
     <Build Include="Subject.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.sql" />
+  </ItemGroup>
 </Project>

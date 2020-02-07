@@ -47,7 +47,7 @@ namespace ClassLibrary.Reports
 
                 foreach (Student student in lowGradeStudents.ToList())
                 {
-                    if (lowGradeStudents.ToList().FindAll(s => s.Id == student.Id).Count > maximalNumberOfMinimalStudentsGrades)
+                    if (lowGradeStudents.ToList().FindAll(s => s.Id == student.Id).Count >= maximalNumberOfMinimalStudentsGrades)
                     {
                         excludedStudens.Add(student);
                     }

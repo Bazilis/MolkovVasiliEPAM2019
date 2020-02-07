@@ -41,11 +41,12 @@ namespace ClassLibrary.Reports
 
         public IEnumerable<IEnumerable<IEnumerable<string>>> GetReportTables()
         {
-            List<List<string>> groupsGradesResultsTable = new List<List<string>>();
             List<List<List<string>>> groupsGradesResultsTables = new List<List<List<string>>>();
 
             foreach (int sessionNumber in AllSessionNumbers)
             {
+                List<List<string>> groupsGradesResultsTable = new List<List<string>>();
+
                 foreach (GroupGradesResults groupGradesResults in GetGrupsGradesResultsTable(sessionNumber, OrderBy, OrderByDescending))
                 {
                     groupsGradesResultsTable.Add(new List<string>
@@ -58,7 +59,6 @@ namespace ClassLibrary.Reports
                 }
 
                 groupsGradesResultsTables.Add(groupsGradesResultsTable);
-                groupsGradesResultsTable.Clear();
             }
             return groupsGradesResultsTables;
         }

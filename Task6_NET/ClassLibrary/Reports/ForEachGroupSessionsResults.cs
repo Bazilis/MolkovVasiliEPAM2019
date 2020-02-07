@@ -42,28 +42,31 @@ namespace ClassLibrary.Reports
         public IEnumerable<string> GetReportHeader()
         {
             return new List<string> {
-                "Surname", "Name", "Patronymic", "Date of birth",
-                "Gender", "Subject name", "Subject type",
+                "Session number", "Group name", "Surname", "Name", "Patronymic",
+                "Gender", "Date of birth", "Subject name", "Subject type",
                 "Exam date", "Student's grade"
             };
         }
 
         public IEnumerable<IEnumerable<IEnumerable<string>>> GetReportTables()
         {
-            List<List<string>> groupSessionResultsTable = new List<List<string>>();
             List<List<List<string>>> groupSessionResultsTables = new List<List<List<string>>>();
 
             foreach (int groupId in AllGroupIds)
             {
+                List<List<string>> groupSessionResultsTable = new List<List<string>>();
+
                 foreach (StudentSessionResult studentSessionResults in GetGroupSessionResultsTable(SessionNumber, groupId, OrderBy, OrderByDescending))
                 {
                     groupSessionResultsTable.Add(new List<string>
                     {
+                        studentSessionResults.SessionNumber.ToString(),
+                        studentSessionResults.GroupName,
                         studentSessionResults.Surname,
                         studentSessionResults.Name,
                         studentSessionResults.Patronymic,
-                        studentSessionResults.DateOfBirth.ToString("MM/dd/yyyy"),
                         studentSessionResults.Gender,
+                        studentSessionResults.DateOfBirth.ToString("MM/dd/yyyy"),
                         studentSessionResults.SubjectName,
                         studentSessionResults.SubjectType,
                         studentSessionResults.ExamDate.ToString("MM/dd/yyyy"),
@@ -72,7 +75,6 @@ namespace ClassLibrary.Reports
                 }
 
                 groupSessionResultsTables.Add(groupSessionResultsTable);
-                groupSessionResultsTable.Clear();
             }
             return groupSessionResultsTables;
         }
@@ -96,36 +98,31 @@ namespace ClassLibrary.Reports
 
                 select new StudentSessionResult
                 {
+                    SessionNumber = sessionNumber,
+                    GroupName = requiredGroup.GroupName,
                     Surname = student.Surname,
                     Name = student.Name,
                     Patronymic = student.Patronymic,
-                    DateOfBirth = student.DateOfBirth,
                     Gender = student.Gender,
-                    ExamDate = exam.ExamDate,
+                    DateOfBirth = student.DateOfBirth,
                     SubjectName = subject.SubjectName,
                     SubjectType = subject.SubjectType,
+                    ExamDate = exam.ExamDate,
                     StudentsGrade = result.StudentsGrade
                 };
 
-            if (groupSessionResult == null || !groupSessionResult.GetEnumerator().MoveNext())
+            IEnumerable<StudentSessionResult> orderedGroupSessionResult;
+
+            if (orderByDescending == false)
             {
-                throw new Exception("Group session results is not found");
+                orderedGroupSessionResult = groupSessionResult.OrderBy(orderBy);
             }
             else
             {
-                IEnumerable<StudentSessionResult> orderedGroupSessionResult;
-
-                if (orderByDescending == false)
-                {
-                    orderedGroupSessionResult = groupSessionResult.OrderBy(orderBy);
-                }
-                else
-                {
-                    orderedGroupSessionResult = groupSessionResult.OrderByDescending(orderBy);
-                }
-
-                return orderedGroupSessionResult;
+                orderedGroupSessionResult = groupSessionResult.OrderByDescending(orderBy);
             }
+
+            return orderedGroupSessionResult;
         }
     }
 }

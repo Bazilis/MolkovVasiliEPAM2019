@@ -56,7 +56,7 @@ namespace ClassLibrary.DataAccessObjectsFactory
                         }
                     }
 
-                    string sqlExpression = $"INSERT INTO {tableName} ({columns}) VALUES ({valuesString})";
+                    string sqlExpression = $"INSERT INTO [{tableName}] ([{columns}]) VALUES ([{valuesString}])";
 
                     sqlCommand.CommandText = sqlExpression;
                     sqlCommand.Connection = sqlConnection;
@@ -78,7 +78,7 @@ namespace ClassLibrary.DataAccessObjectsFactory
 
                 string tableName = type.Name;
 
-                string sqlExpression = $"SELECT * FROM {tableName} WHERE Id = @Id";
+                string sqlExpression = $"SELECT * FROM [{tableName}] WHERE Id = @Id";
 
                 sqlConnection.Open();
 
@@ -130,7 +130,7 @@ namespace ClassLibrary.DataAccessObjectsFactory
 
                 sqlConnection.Open();
 
-                string sqlExpression = $"SELECT * FROM {tableName}";
+                string sqlExpression = $"SELECT * FROM [{tableName}]";
 
                 using (SqlCommand sqlCommand = new SqlCommand(sqlExpression, sqlConnection))
                 {
@@ -207,7 +207,7 @@ namespace ClassLibrary.DataAccessObjectsFactory
                         }
                     }
 
-                    string sqlExpression = $"UPDATE {tableName} SET {valuesString} WHERE Id = @Id";
+                    string sqlExpression = $"UPDATE [{tableName}] SET [{valuesString}] WHERE Id = @Id";
 
                     SqlParameter idParameter = new SqlParameter("@Id", type.GetProperty("Id").GetValue(item));
                     sqlCommand.Parameters.Add(idParameter);
@@ -232,7 +232,7 @@ namespace ClassLibrary.DataAccessObjectsFactory
 
                 sqlConnection.Open();
 
-                string sqlExpression = $"DELETE FROM {tableName} WHERE Id = @Id";
+                string sqlExpression = $"DELETE FROM [{tableName}] WHERE Id = @Id";
 
                 using (SqlCommand sqlCommand = new SqlCommand(sqlExpression, sqlConnection))
                 {

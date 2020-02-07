@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using Microsoft.Office.Interop.Excel;
 
@@ -7,7 +6,7 @@ namespace ClassLibrary.Reports
 {
     public static class OutputToXlsx
     {
-        public static void ToXlsxFile(IReport report, string directory = @"..\..\", string fileName = "Report")
+        public static void ToXlsxFile(IReport report, string directory, string fileName = "Report")
         {
             string fileFormat = ".xlsx";
 
@@ -15,27 +14,21 @@ namespace ClassLibrary.Reports
 
             bool exceptionFlag = false;
 
-            if (!Directory.Exists(directory))
-            {
-                throw new ArgumentException("The directory does not exist");
-            }
+            bool writeHeaderFlag = true;
+
+            int row = 1;
+            int col = 1;
+
+            IEnumerable<string> header = report.GetReportHeader();
 
             Application xlApplication = new Application();
             Workbook xlWorkbook = xlApplication.Workbooks.Add();
+            Worksheet xlSheet = (Worksheet)xlWorkbook.Sheets[1];
 
             foreach (IEnumerable<IEnumerable<string>> sheet in report.GetReportTables())
             {
-                int i = 1;
-                Worksheet xlSheet = (Worksheet)xlWorkbook.Sheets[i];
-
                 try
                 {
-                    IEnumerable<string> header = report.GetReportHeader();
-
-                    bool writeHeaderFlag = true;
-                    int row = 1;
-                    int col = 1;
-
                     foreach (IEnumerable<string> rowStrings in sheet)
                     {
                         if (writeHeaderFlag)
@@ -59,10 +52,10 @@ namespace ClassLibrary.Reports
                         col = 1;
                     }
 
-                    Range dataTable = xlSheet.get_Range(xlSheet.Cells[1, 1], xlSheet.Cells[100, 100]);
+                    Range dataTable = xlSheet.Range[xlSheet.Cells[1, 1], xlSheet.Cells[100, 100]];
                     dataTable.Columns.AutoFit();
 
-                    Range dataHeader = xlSheet.get_Range(xlSheet.Cells[1, 1], xlSheet.Cells[1, 50]);
+                    Range dataHeader = xlSheet.Range[xlSheet.Cells[1, 1], xlSheet.Cells[1, 50]];
                     dataHeader.Cells.Font.Bold = true;
                 }
                 catch (Exception exception)
@@ -70,14 +63,12 @@ namespace ClassLibrary.Reports
                     exceptionFlag = true;
                     throw new Exception(exception.Message);
                 }
-
-                i++;
             }
 
             if (exceptionFlag == false)
             {
                 xlWorkbook.SaveAs(outputPath);
-                xlWorkbook.Close(true);
+                xlWorkbook.Close();
                 xlApplication.Quit();
             }
             else
