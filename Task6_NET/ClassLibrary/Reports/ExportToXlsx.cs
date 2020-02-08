@@ -4,7 +4,10 @@ using Microsoft.Office.Interop.Excel;
 
 namespace ClassLibrary.Reports
 {
-    public static class OutputToXlsx
+    /// <summary>
+    /// Export report to Excel file (*.xlsx)
+    /// </summary>
+    public static class ExportToXlsx
     {
         public static void ToXlsxFile(IReport report, string directory, string fileName = "Report")
         {

@@ -6,6 +6,9 @@ using ClassLibrary.DataAccessObjectsFactory;
 
 namespace ClassLibrary.Reports
 {
+    /// <summary>
+    /// Сreates a list of students for expulsion
+    /// </summary>
     public class ExcludedStudentsList
     {
         private ICRUD<Exam> examDAO;

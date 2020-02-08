@@ -2,6 +2,9 @@
 
 namespace ClassLibrary.ReportsDataModels
 {
+    /// <summary>
+    /// Data model for results of session for each group report
+    /// </summary>
     public class StudentSessionResult
     {
         public int SessionNumber { get; set; }

@@ -2,6 +2,9 @@
 
 namespace ClassLibrary.DatabaseDataModels
 {
+    /// <summary>
+    /// Data model for Exam database table
+    /// </summary>
     public class Exam
     {
         public int Id { get; private set; }

@@ -2,6 +2,9 @@
 
 namespace ClassLibrary.DatabaseDataModels
 {
+    /// <summary>
+    /// Data model for Group database table
+    /// </summary>
     public class Group
     {
         public int Id { get; private set; }

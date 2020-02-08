@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>ClassLibrary.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -59,10 +60,10 @@
     <Compile Include="ReportsDataModels\GroupGradesResults.cs" />
     <Compile Include="ReportsDataModels\StudentSessionResult.cs" />
     <Compile Include="Reports\ExcludedStudentsList.cs" />
+    <Compile Include="Reports\ExportToXlsx.cs" />
     <Compile Include="Reports\ForEachGroupSessionsResults.cs" />
     <Compile Include="Reports\ForEachSessionGroupsGradesResults.cs" />
     <Compile Include="Reports\IReport.cs" />
-    <Compile Include="Reports\OutputToXlsx.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Database\Database.sqlproj">

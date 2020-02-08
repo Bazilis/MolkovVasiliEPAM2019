@@ -7,6 +7,9 @@ using ClassLibrary.DataAccessObjectsFactory;
 
 namespace ClassLibrary.Reports
 {
+    /// <summary>
+    /// Сreates a report for each session for each group grades
+    /// </summary>
     public class ForEachSessionGroupsGradesResults : IReport
     {
         private ICRUD<Exam> examDAO;

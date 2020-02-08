@@ -8,6 +8,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject
 {
+    /// <summary>
+    /// Test methods for report classes
+    /// </summary>
     [TestClass()]
     public class ReportsClassesTests
     {
@@ -15,8 +18,11 @@ namespace UnitTestProject
 
         DAOCreator creatorDAO = DAOCreator.GetInstance(connectionString);
 
+        /// <summary>
+        /// Test method for 'ExcludedStudentsList' class
+        /// </summary>
         [TestMethod()]
-        public void ExcludedStudentsReportTestMethod()
+        public void ExcludedStudentsListTestMethod()
         {
             ExcludedStudentsList excludedStudents = new ExcludedStudentsList(creatorDAO);
 
@@ -40,6 +46,9 @@ namespace UnitTestProject
             Assert.IsTrue(expectedExcludedStudent == resultExcludedStudent);
         }
 
+        /// <summary>
+        /// Test method for 'ForEachGroupSessionsResults' class
+        /// </summary>
         [TestMethod()]
         public void ForEachGroupSessionsResultsReportTestMethod()
         {
@@ -65,11 +74,14 @@ namespace UnitTestProject
             }
 
 
-            OutputToXlsx.ToXlsxFile(groupSessionResultsReport, "C:\\Users\\Asus\\source\\repos\\MolkovVasiliEPAM2019\\Task6_NET\\UnitTestProject\\", "GroupSessionResultsReport");
+            ExportToXlsx.ToXlsxFile(groupSessionResultsReport, "C:\\Users\\Asus\\source\\repos\\MolkovVasiliEPAM2019\\Task6_NET\\UnitTestProject\\", "GroupSessionResultsReport");
 
             Assert.IsTrue(resultString == expectedString);
         }
 
+        /// <summary>
+        /// Test method for 'ForEachSessionGroupsGradesResults' class
+        /// </summary>
         [TestMethod()]
         public void ForEachSessionGroupsGradesResultsTestMethod()
         {
@@ -98,7 +110,7 @@ namespace UnitTestProject
             }
 
 
-            OutputToXlsx.ToXlsxFile(sessionGroupsGradesResults, "C:\\Users\\Asus\\source\\repos\\MolkovVasiliEPAM2019\\Task6_NET\\UnitTestProject\\", "SessionGroupsGradesResultsReport");
+            ExportToXlsx.ToXlsxFile(sessionGroupsGradesResults, "C:\\Users\\Asus\\source\\repos\\MolkovVasiliEPAM2019\\Task6_NET\\UnitTestProject\\", "SessionGroupsGradesResultsReport");
 
             Assert.IsTrue(resultString == expectedString);
         }

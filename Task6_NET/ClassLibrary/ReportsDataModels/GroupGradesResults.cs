@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary.ReportsDataModels
 {
+    /// <summary>
+    /// Data model for session group grades report
+    /// </summary>
     public class GroupGradesResults
     {
         public string GroupName { get; set; }

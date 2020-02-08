@@ -3,6 +3,10 @@ using ClassLibrary.DatabaseDataModels;
 
 namespace ClassLibrary.DataAccessObjectsFactory
 {
+    /// <summary>
+    /// Implements singleton pattern and
+    /// override methods that provide access to database access objects
+    /// </summary>
     public class DAOCreator : AbstractCreator
     {
         public static string ConnectionString { get; private set; }

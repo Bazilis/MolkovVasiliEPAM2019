@@ -6,6 +6,10 @@ using System.Collections.Generic;
 
 namespace ClassLibrary.DataAccessObjectsFactory
 {
+    /// <summary>
+    /// Generic class providing CRUD methods for T-type database objects
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class GenericCRUD<T> : ICRUD<T> where T : class
     {
         private string ConnectionString { get; set; }

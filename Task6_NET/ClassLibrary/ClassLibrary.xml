@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLibrary.DataAccessObjectsFactory.AbstractCreator">
+            <summary>
+            Describes the abstract methods that provide access to database access objects 
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DataAccessObjectsFactory.DAOCreator">
+            <summary>
+            Implements singleton pattern and
+            override methods that provide access to database access objects
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DataAccessObjectsFactory.ExamDAO">
+            <summary>
+            Inherits CRUD methods for Exam database table
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DataAccessObjectsFactory.GenericCRUD`1">
+            <summary>
+            Generic class providing CRUD methods for T-type database objects
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:ClassLibrary.DataAccessObjectsFactory.GroupDAO">
+            <summary>
+            Inherits CRUD methods for Group database table
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DataAccessObjectsFactory.ICRUD`1">
+            <summary>
+            Defining CRUD methods
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:ClassLibrary.DataAccessObjectsFactory.ResultDAO">
+            <summary>
+            Inherits CRUD methods for Result database table
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DataAccessObjectsFactory.StudentDAO">
+            <summary>
+            Inherits CRUD methods for Student database table
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DataAccessObjectsFactory.SubjectDAO">
+            <summary>
+            Inherits CRUD methods for Subject database table
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DatabaseDataModels.Exam">
+            <summary>
+            Data model for Exam database table
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DatabaseDataModels.Group">
+            <summary>
+            Data model for Group database table
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DatabaseDataModels.Result">
+            <summary>
+            Data model for Result database table
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DatabaseDataModels.Student">
+            <summary>
+            Data model for Student database table
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.DatabaseDataModels.Subject">
+            <summary>
+            Data model for Subject database table
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.ReportsDataModels.GroupGradesResults">
+            <summary>
+            Data model for session group grades report
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.ReportsDataModels.StudentSessionResult">
+            <summary>
+            Data model for results of session for each group report
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.Reports.ExcludedStudentsList">
+            <summary>
+            Сreates a list of students for expulsion
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.Reports.ExportToXlsx">
+            <summary>
+            Export report to Excel file (*.xlsx)
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.Reports.ForEachGroupSessionsResults">
+            <summary>
+            Сreates a report of results of session for each group
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.Reports.ForEachSessionGroupsGradesResults">
+            <summary>
+            Сreates a report for each session for each group grades
+            </summary>
+        </member>
+        <member name="T:ClassLibrary.Reports.IReport">
+            <summary>
+            Defines methods for export data to report
+            </summary>
+        </member>
+    </members>
+</doc>

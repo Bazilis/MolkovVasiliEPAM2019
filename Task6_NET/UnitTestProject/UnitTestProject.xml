@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTestProject</name>
+    </assembly>
+    <members>
+        <member name="T:UnitTestProject.ReportsClassesTests">
+            <summary>
+            Test methods for report classes
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.ReportsClassesTests.ExcludedStudentsListTestMethod">
+            <summary>
+            Test method for 'ExcludedStudentsList' class
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.ReportsClassesTests.ForEachGroupSessionsResultsReportTestMethod">
+            <summary>
+            Test method for 'ForEachGroupSessionsResults' class
+            </summary>
+        </member>
+        <member name="M:UnitTestProject.ReportsClassesTests.ForEachSessionGroupsGradesResultsTestMethod">
+            <summary>
+            Test method for 'ForEachSessionGroupsGradesResults' class
+            </summary>
+        </member>
+    </members>
+</doc>
