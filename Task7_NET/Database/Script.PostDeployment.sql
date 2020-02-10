@@ -24,9 +24,21 @@ VALUES (ExaminerSurname, ExaminerName, ExaminerPatronymic);
 
 
 MERGE INTO [Specialty] AS Target
-   USING  (VALUES ('1-36 04 02', 'Promyshlennaya elektronika'),
-				  ('1-40 04 01', 'Informatika i tekhnologii programmirovaniya'),
-				  ('1-40 05 01', 'Informacionnye sistemy i tekhnologii'))
+   USING  (VALUES ('1-36 04 02', 'Promyshlennaya elektronika',
+	'Promyshlennaya elektronika – oblast radioelektroniki, vklyuchayushchaya voprosy primeneniya 
+	elektronnyh priborov v razlichnyh otraslyah promyshlennosti i obsluzhivaniya etih otraslej elektronnymi 
+	ustrojstvami kontrolya, izmereniya, upravleniya i elektrosvyazi'),
+
+				  ('1-40 04 01', 'Informatika i tekhnologii programmirovaniya',
+	'Informacionnye tekhnologii – sovokupnost sposobov i priemov obrabotki informacii 
+	vo vsekh vidah chelovecheskoj deyatelnosti s ispolzovaniem sredstv svyazi, poligrafii, 
+	vychislitelnoj tekhniki i programmnogo obespecheniya'),
+
+				  ('1-40 05 01', 'Informacionnye sistemy i tekhnologii',
+	'Informacionnye tekhnologii – sovokupnost sposobov i priemov obrabotki informacii 
+	vo vsekh vidah chelovecheskoj deyatelnosti s ispolzovaniem sredstv svyazi, poligrafii, 
+	vychislitelnoj tekhniki i programmnogo obespecheniya'))
+
 AS Source (SpecialtyCode, SpecialtyName, SpecialtyDescribe)
 ON (Target.SpecialtyCode = Source.SpecialtyCode AND
 	Target.SpecialtyName = Source.SpecialtyName AND
@@ -123,9 +135,9 @@ MERGE INTO [Result] AS Target
    USING  (VALUES (2, 5, 90),
 				  (3, 8, 80),
 				  (1, 3, 50))
-AS Source (ExamId, StudentId, StudentGrade)
+AS Source (ExamId, StudentId, StudentsGrade)
 ON (Target.ExamId = Source.ExamId AND
 	Target.StudentId = Source.StudentId)
 WHEN NOT MATCHED BY TARGET THEN
-INSERT (ExamId, StudentId, StudentGrade)
-VALUES (ExamId, StudentId, StudentGrade);
+INSERT (ExamId, StudentId, StudentsGrade)
+VALUES (ExamId, StudentId, StudentsGrade);
