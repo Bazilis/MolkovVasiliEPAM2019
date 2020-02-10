@@ -10,21 +10,21 @@ namespace ConsoleApp.DatabaseDataModels
         public int Id { get; set; }
 
 
-        [Column(Name = "Surname")]
-        public string Surname { get; set; }
+        [Column(Name = "ExaminerSurname")]
+        public string ExaminerSurname { get; set; }
 
 
-        [Column(Name = "Name")]
-        public string Name { get; set; }
+        [Column(Name = "ExaminerName")]
+        public string ExaminerName { get; set; }
 
 
-        [Column(Name = "Patronymic")]
-        public string Patronymic { get; set; }
+        [Column(Name = "ExaminerPatronymic")]
+        public string ExaminerPatronymic { get; set; }
 
 
         public override string ToString()
         {
-            return $"Id: {Id}, Surname: {Surname}, Name: {Name}, Patronymic: {Patronymic}";
+            return $"Id: {Id}, Examiner surname: {ExaminerSurname}, Examiner name: {ExaminerName}, Examiner patronymic: {ExaminerPatronymic}";
         }
     }
 }

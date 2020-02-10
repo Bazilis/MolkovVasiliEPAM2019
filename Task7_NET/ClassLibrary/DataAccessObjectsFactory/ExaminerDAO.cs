@@ -46,9 +46,9 @@ namespace ConsoleApp.DataAccessObjectsFactory
             {
                 Examiner examiner = dataContext.GetTable<Examiner>().FirstOrDefault(x => x.Id == ex.Id);
 
-                examiner.Name = ex.Name;
-                examiner.Surname = ex.Surname;
-                examiner.Patronymic = ex.Patronymic;
+                examiner.ExaminerName = ex.ExaminerName;
+                examiner.ExaminerSurname = ex.ExaminerSurname;
+                examiner.ExaminerPatronymic = ex.ExaminerPatronymic;
 
                 dataContext.SubmitChanges();
             }
